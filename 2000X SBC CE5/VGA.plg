@@ -1,0 +1,1016 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VGA - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\BWadia\LOCALS~1\Temp\1\RSP90.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/VGA.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"L:\RVTS\Application.cpp"
+"L:\RVTS\BottomMenu.cpp"
+"L:\RVTS\ChildView.cpp"
+"L:\RVTS\CommPort.cpp"
+"L:\RVTS\Connection.cpp"
+"L:\RVTS\EtherPort.cpp"
+"L:\RVTS\HostCommand.cpp"
+"L:\RVTS\MainFrame.cpp"
+"L:\RVTS\ScreenKeypad.cpp"
+"L:\RVTS\ScreenObject.cpp"
+"L:\RVTS\ServerSocket.cpp"
+"L:\RVTS\TcpSocket.cpp"
+"L:\RVTS\VfdAdd_Back_Next_Button.cpp"
+"L:\RVTS\VfdAlphanumeric.cpp"
+"L:\RVTS\VfdChoice.cpp"
+"L:\RVTS\VfdDate.cpp"
+"L:\RVTS\VfdLargeRadioMenu.cpp"
+"L:\RVTS\VfdObject.cpp"
+"L:\RVTS\VfdRadioButton.cpp"
+"L:\RVTS\VfdRadioLargeButton.cpp"
+"L:\RVTS\VfdRadioMenu.cpp"
+"L:\RVTS\VfdSubmenu.cpp"
+"L:\RVTS\VfdText.cpp"
+"L:\RVTS\VfdTime.cpp"
+"L:\RVTS\VfdTitle.cpp"
+"L:\RVTS\VfdToggle.cpp"
+"L:\RVTS\VfdVariable.cpp"
+"L:\RVTS\VGA.cpp"
+"L:\RVTS\VGAExitButton.cpp"
+"L:\RVTS\VGANextButton.cpp"
+"L:\RVTS\VGAObject.cpp"
+"L:\RVTS\VGASave.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\BWadia\LOCALS~1\Temp\1\RSP90.tmp" 
+Creating temporary file "C:\DOCUME~1\BWadia\LOCALS~1\Temp\1\RSP91.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/VGA.pdb" /debug /machine:I386 /out:"Debug/VGA.exe" /pdbtype:sept 
+.\Debug\Application.obj
+.\Debug\BottomMenu.obj
+.\Debug\ChildView.obj
+.\Debug\ClientSocket.obj
+.\Debug\CommPort.obj
+.\Debug\Connection.obj
+.\Debug\EtherPort.obj
+.\Debug\HostCommand.obj
+.\Debug\MainFrame.obj
+.\Debug\Queue.obj
+.\Debug\ScreenKeypad.obj
+.\Debug\ScreenObject.obj
+.\Debug\ScreenObjectList.obj
+.\Debug\ServerSocket.obj
+.\Debug\StdAfx.obj
+.\Debug\TcpSocket.obj
+.\Debug\VfdAdd_Back_Next_Button.obj
+.\Debug\VfdAlphanumeric.obj
+.\Debug\VfdChoice.obj
+.\Debug\VfdDate.obj
+.\Debug\VfdLargeRadioMenu.obj
+.\Debug\VfdObject.obj
+.\Debug\VfdRadioButton.obj
+.\Debug\VfdRadioLargeButton.obj
+.\Debug\VfdRadioMenu.obj
+.\Debug\VfdSubmenu.obj
+.\Debug\VfdText.obj
+.\Debug\VfdTime.obj
+.\Debug\VfdTitle.obj
+.\Debug\VfdToggle.obj
+.\Debug\VfdVariable.obj
+.\Debug\VGA.obj
+.\Debug\VGAExitButton.obj
+.\Debug\VGANextButton.obj
+.\Debug\VGAObject.obj
+.\Debug\VGASave.obj
+.\Debug\VGA.res
+]
+Creating command line "link.exe @C:\DOCUME~1\BWadia\LOCALS~1\Temp\1\RSP91.tmp"
+<h3>Output Window</h3>
+Compiling...
+Application.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+BottomMenu.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+ChildView.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+L:\RVTS\ChildView.cpp(387) : error C2039: 'VGA_HORNSCANABORT' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(387) : error C2065: 'VGA_HORNSCANABORT' : undeclared identifier
+L:\RVTS\ChildView.cpp(388) : error C2039: 'VGA_WELDRETRACT' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(388) : error C2065: 'VGA_WELDRETRACT' : undeclared identifier
+L:\RVTS\ChildView.cpp(393) : error C2039: 'VGA_WELDRETRACT' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(400) : error C2039: 'VGA_HORNSCANABORT' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(418) : error C2039: 'VGA_PRESETCLEARCANCEL' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(418) : error C2065: 'VGA_PRESETCLEARCANCEL' : undeclared identifier
+L:\RVTS\ChildView.cpp(419) : error C2039: 'VGA_PRESETCLEAROK' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(419) : error C2065: 'VGA_PRESETCLEAROK' : undeclared identifier
+L:\RVTS\ChildView.cpp(420) : error C2039: 'VGA_PRESETSAVECANCEL' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(420) : error C2065: 'VGA_PRESETSAVECANCEL' : undeclared identifier
+L:\RVTS\ChildView.cpp(421) : error C2039: 'VGA_PRESETSAVEOK' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(421) : error C2065: 'VGA_PRESETSAVEOK' : undeclared identifier
+L:\RVTS\ChildView.cpp(422) : error C2039: 'VGA_WELDRESETCOUNTOK' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(422) : error C2065: 'VGA_WELDRESETCOUNTOK' : undeclared identifier
+L:\RVTS\ChildView.cpp(423) : error C2039: 'VGA_OVERWRITEPRESETCANCEL' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(423) : error C2065: 'VGA_OVERWRITEPRESETCANCEL' : undeclared identifier
+L:\RVTS\ChildView.cpp(424) : error C2039: 'VGA_OVERWRITEPRESETOK' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(424) : error C2065: 'VGA_OVERWRITEPRESETOK' : undeclared identifier
+L:\RVTS\ChildView.cpp(425) : error C2039: 'VGA_ACTSTARTCANCEL' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(425) : error C2065: 'VGA_ACTSTARTCANCEL' : undeclared identifier
+L:\RVTS\ChildView.cpp(426) : error C2039: 'VGA_ACTSTARTOK' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(426) : error C2065: 'VGA_ACTSTARTOK' : undeclared identifier
+L:\RVTS\ChildView.cpp(427) : error C2039: 'VGA_COLDSTARTCANCEL' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(427) : error C2065: 'VGA_COLDSTARTCANCEL' : undeclared identifier
+L:\RVTS\ChildView.cpp(428) : error C2039: 'VGA_COLDSTARTOK' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(428) : error C2065: 'VGA_COLDSTARTOK' : undeclared identifier
+L:\RVTS\ChildView.cpp(429) : error C2039: 'VGA_FACTORYDEFAULTCANCEL' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(429) : error C2065: 'VGA_FACTORYDEFAULTCANCEL' : undeclared identifier
+L:\RVTS\ChildView.cpp(430) : error C2039: 'VGA_FACTORYDEFAULTOK' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(430) : error C2065: 'VGA_FACTORYDEFAULTOK' : undeclared identifier
+L:\RVTS\ChildView.cpp(431) : error C2039: 'VGA_RADIOCOLUMNCANCEL' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(431) : error C2065: 'VGA_RADIOCOLUMNCANCEL' : undeclared identifier
+L:\RVTS\ChildView.cpp(432) : error C2039: 'VGA_RADIOCOLUMNOK' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(432) : error C2065: 'VGA_RADIOCOLUMNOK' : undeclared identifier
+L:\RVTS\ChildView.cpp(433) : error C2039: 'VGA_RESETSENSORCANCEL' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(433) : error C2065: 'VGA_RESETSENSORCANCEL' : undeclared identifier
+L:\RVTS\ChildView.cpp(434) : error C2039: 'VGA_RESETSENSOROK' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(434) : error C2065: 'VGA_RESETSENSOROK' : undeclared identifier
+L:\RVTS\ChildView.cpp(435) : error C2039: 'VGA_WELDRESETCOUNTCANCEL' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(435) : error C2065: 'VGA_WELDRESETCOUNTCANCEL' : undeclared identifier
+L:\RVTS\ChildView.cpp(502) : error C2039: 'VGA_PRESETNAME' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(502) : error C2065: 'VGA_PRESETNAME' : undeclared identifier
+L:\RVTS\ChildView.cpp(503) : error C2039: 'VGA_PRESETINFO' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(503) : error C2065: 'VGA_PRESETINFO' : undeclared identifier
+L:\RVTS\ChildView.cpp(518) : error C2039: 'VGA_WELDSTATE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(518) : error C2065: 'VGA_WELDSTATE' : undeclared identifier
+L:\RVTS\ChildView.cpp(519) : error C2039: 'VGA_PRESETNAME' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(520) : error C2039: 'VGA_PRESETINFO' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(575) : error C2039: 'VGA_VGANEXTBUTTON' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(575) : error C2065: 'VGA_VGANEXTBUTTON' : undeclared identifier
+L:\RVTS\ChildView.cpp(734) : error C2039: 'VGA_VGANEXTBUTTON' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(735) : error C2039: 'VGA_VGAEXITBUTTON' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(735) : error C2065: 'VGA_VGAEXITBUTTON' : undeclared identifier
+L:\RVTS\ChildView.cpp(736) : error C2039: 'VGA_VGASAVEBUTTON' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(736) : error C2065: 'VGA_VGASAVEBUTTON' : undeclared identifier
+L:\RVTS\ChildView.cpp(1043) : error C2039: 'VGA_VGAEXITBUTTON' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(1044) : error C2039: 'VGA_HORNSCANGRAPH' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(1044) : error C2065: 'VGA_HORNSCANGRAPH' : undeclared identifier
+L:\RVTS\ChildView.cpp(1045) : error C2039: 'VGA_HORNSCAN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(1045) : error C2065: 'VGA_HORNSCAN' : undeclared identifier
+L:\RVTS\ChildView.cpp(1046) : error C2039: 'VGA_ALARMBUTTON' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(1046) : error C2065: 'VGA_ALARMBUTTON' : undeclared identifier
+L:\RVTS\ChildView.cpp(1047) : error C2039: 'VGA_HORNSCANPRINT' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(1047) : error C2065: 'VGA_HORNSCANPRINT' : undeclared identifier
+L:\RVTS\ChildView.cpp(1080) : error C2039: 'VGA_HORNSCANABORT' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(1081) : error C2039: 'VGA_WELDRETRACT' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(1714) : error C2039: 'VGA_WELDSTATE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(1835) : error C2039: 'VGA_ALARMBUTTON' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(1893) : error C2039: 'VGA_ALARMBUTTON' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(2131) : error C2039: 'VGA_NOGRAPH' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(2131) : error C2065: 'VGA_NOGRAPH' : undeclared identifier
+L:\RVTS\ChildView.cpp(2131) : error C2039: 'VGA_NOHSGRAPH' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(2131) : error C2065: 'VGA_NOHSGRAPH' : undeclared identifier
+L:\RVTS\ChildView.cpp(2213) : error C2039: 'VGA_NOGRAPH' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(2213) : error C2039: 'VGA_NOHSGRAPH' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(2271) : error C2039: 'VGA_NOGRAPH' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(2271) : error C2039: 'VGA_NOHSGRAPH' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ChildView.cpp(2493) : error C2065: 'WCE_IF' : undeclared identifier
+L:\RVTS\ChildView.cpp(2495) : error C2039: 'hdc' : is not a member of 'tagPDA'
+        c:\program files\microsoft visual studio\vc98\include\commdlg.h(670) : see declaration of 'tagPDA'
+L:\RVTS\ChildView.cpp(2579) : error C2039: 'm_nFromPage' : is not a member of 'CPrintDialog'
+        c:\program files\microsoft visual studio\vc98\mfc\include\afxdlgs.h(341) : see declaration of 'CPrintDialog'
+L:\RVTS\ChildView.cpp(2580) : error C2039: 'm_nToPage' : is not a member of 'CPrintDialog'
+        c:\program files\microsoft visual studio\vc98\mfc\include\afxdlgs.h(341) : see declaration of 'CPrintDialog'
+CommPort.cpp
+Connection.cpp
+EtherPort.cpp
+HostCommand.cpp
+MainFrame.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+ScreenKeypad.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+L:\RVTS\ScreenKeypad.cpp(251) : error C2039: 'VGA_PRESETSAVEASSIGN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(251) : error C2065: 'VGA_PRESETSAVEASSIGN' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(548) : error C2039: 'VGA_PRESETSAVEASSIGN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(603) : error C2039: 'VGA_PRESETSAVEASSIGN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(667) : error C2039: 'XXCANTCHANGEXX' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(667) : error C2065: 'XXCANTCHANGEXX' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(668) : error C2039: 'PRETRIGDIST' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(668) : error C2065: 'PRETRIGDIST' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(668) : error C2039: 'FORCESTEPFLAG' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(668) : error C2065: 'FORCESTEPFLAG' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(669) : error C2039: 'AMPLITUDESTEPFLAG' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(669) : error C2065: 'AMPLITUDESTEPFLAG' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(718) : error C2039: 'XXCANTCHANGEXX' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(719) : error C2039: 'PRETRIGDIST' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(720) : error C2039: 'FORCESTEPFLAG' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(721) : error C2039: 'AMPLITUDESTEPFLAG' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(809) : error C2039: 'XXCANTCHANGEXX' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(810) : error C2039: 'PRETRIGDIST' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(811) : error C2039: 'FORCESTEPFLAG' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(812) : error C2039: 'AMPLITUDESTEPFLAG' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(932) : error C2039: 'VGA_PRESETSAVEASSIGN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(961) : error C2039: 'VGA_PRESETSAVEASSIGN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1004) : error C2039: 'VGA_PRESETSAVEASSIGN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1051) : error C2039: 'VGA_PRESETSAVEASSIGN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1099) : error C2039: 'VGA_PRESETSAVEASSIGN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1105) : error C2039: 'VGA_PRESETSAVEASSIGN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1137) : error C2039: 'VGA_PRESETSAVEASSIGN' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1650) : error C2039: 'XXCANTCHANGEXX' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1933) : error C2039: 'FORCEGRAPHSAMPLE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1933) : error C2065: 'FORCEGRAPHSAMPLE' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(1946) : error C2039: 'DISTANCEGRAPHSAMPLE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1946) : error C2065: 'DISTANCEGRAPHSAMPLE' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(1959) : error C2039: 'AMPLITUDEGRAPHSAMPLE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1959) : error C2065: 'AMPLITUDEGRAPHSAMPLE' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(1972) : error C2039: 'POWERGRAPHSAMPLE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1972) : error C2065: 'POWERGRAPHSAMPLE' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(1985) : error C2039: 'VELOCITYGRAPHSAMPLE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1985) : error C2065: 'VELOCITYGRAPHSAMPLE' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(1998) : error C2039: 'WELDHISTORYSAMPLE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(1998) : error C2065: 'WELDHISTORYSAMPLE' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(2011) : error C2039: 'SETUPPRESETSAMPLE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(2011) : error C2065: 'SETUPPRESETSAMPLE' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(2024) : error C2039: 'FREQUENCYGRAPHSAMPLE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(2024) : error C2065: 'FREQUENCYGRAPHSAMPLE' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(2037) : error C2039: 'WELDSUMMARYSAMPLE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(2037) : error C2065: 'WELDSUMMARYSAMPLE' : undeclared identifier
+L:\RVTS\ScreenKeypad.cpp(2050) : error C2039: 'LINESPERPAGE' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenKeypad.cpp(2050) : error C2065: 'LINESPERPAGE' : undeclared identifier
+ScreenObject.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+L:\RVTS\ScreenObject.cpp(73) : error C2039: 'initialized' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenObject.cpp(73) : error C2086: 'initialized' : redefinition
+L:\RVTS\ScreenObject.cpp(297) : error C2065: 'VGA_PRESETNAME' : undeclared identifier
+L:\RVTS\ScreenObject.cpp(297) : error C2051: case expression not constant
+L:\RVTS\ScreenObject.cpp(301) : error C2065: 'VGA_PRESETINFO' : undeclared identifier
+L:\RVTS\ScreenObject.cpp(301) : error C2051: case expression not constant
+L:\RVTS\ScreenObject.cpp(305) : warning C4060: switch statement contains no 'case' or 'default' labels
+L:\RVTS\ScreenObject.cpp(338) : error C2065: 'VGA_WELDSTATE' : undeclared identifier
+L:\RVTS\ScreenObject.cpp(471) : error C2039: 'GetInteger' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+L:\RVTS\ScreenObject.cpp(482) : error C2065: 'ObjectPointer' : undeclared identifier
+L:\RVTS\ScreenObject.cpp(678) : error C2039: 'RemoveNull' : is not a member of 'CScreenObject'
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+ServerSocket.cpp
+TcpSocket.cpp
+VfdAdd_Back_Next_Button.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdAlphanumeric.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdChoice.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+L:\RVTS\VfdChoice.cpp(58) : error C2065: 'AMPLITUDESTEPFLAG' : undeclared identifier
+L:\RVTS\VfdChoice.cpp(58) : error C2065: 'FORCESTEPFLAG' : undeclared identifier
+L:\RVTS\VfdChoice.cpp(58) : error C2065: 'PRETRIGFLAG' : undeclared identifier
+L:\RVTS\VfdChoice.cpp(59) : error C2065: 'XTIMESCALEFACTOR' : undeclared identifier
+L:\RVTS\VfdChoice.cpp(59) : error C2065: 'FREQOFFSETSIGNFLAG' : undeclared identifier
+L:\RVTS\VfdChoice.cpp(134) : error C2065: 'GLOBALPRINTING' : undeclared identifier
+VfdDate.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdLargeRadioMenu.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdObject.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdRadioButton.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdRadioLargeButton.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+Generating Code...
+Compiling...
+VfdRadioMenu.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdSubmenu.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdText.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdTime.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdTitle.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VfdToggle.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+L:\RVTS\VfdToggle.cpp(66) : error C2065: 'VGA_AUTOREFRESH' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(66) : error C2065: 'UNITS' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(140) : error C2065: 'FORCEGRAPHALARM' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(140) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(143) : error C2065: 'DISTANCEGRAPHALARM' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(143) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(146) : error C2065: 'AMPLITUDEGRAPHALARM' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(146) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(149) : error C2065: 'POWERGRAPHALARM' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(149) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(152) : error C2065: 'VELOCITYGRAPHALARM' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(152) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(155) : error C2065: 'WELDHISTORYALARM' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(155) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(158) : error C2065: 'SETUPPRESETALARM' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(158) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(161) : error C2065: 'FREQUENCYGRAPHALARM' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(161) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(164) : error C2065: 'WELDSUMMARYALARM' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(164) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(168) : error C2065: 'EXTPRESETS' : undeclared identifier
+L:\RVTS\VfdToggle.cpp(168) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(175) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(182) : error C2051: case expression not constant
+L:\RVTS\VfdToggle.cpp(192) : warning C4065: switch statement contains 'default' but no 'case' labels
+VfdVariable.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VGA.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VGAExitButton.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VGANextButton.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VGAObject.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+VGASave.cpp
+l:\rvts\screenobject.h(146) : error C2059: syntax error : 'constant'
+l:\rvts\screenobject.h(537) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(537) : error C2238: unexpected token(s) preceding ';'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(537) : error C2259: 'CScreenObject' : cannot instantiate abstract class due to following members:
+        l:\rvts\screenobject.h(63) : see declaration of 'CScreenObject'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::Draw(class CDC *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(95) : see declaration of 'Draw'
+l:\rvts\screenobject.h(537) : warning C4259: 'void __thiscall CScreenObject::SetRect(const class CRect &)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(96) : see declaration of 'SetRect'
+l:\rvts\screenobject.h(537) : warning C4259: 'bool __thiscall CScreenObject::MouseClick(const class CPoint &,class CChildView *)' : pure virtual function was not defined
+        l:\rvts\screenobject.h(97) : see declaration of 'MouseClick'
+l:\rvts\screenobject.h(547) : error C2143: syntax error : missing ';' before 'protected'
+l:\rvts\screenobject.h(552) : error C2143: syntax error : missing ';' before 'private'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+l:\rvts\screenobject.h(557) : error C2143: syntax error : missing ';' before '}'
+Generating Code...
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+VGA.exe - 431 error(s), 158 warning(s)
+</pre>
+</body>
+</html>

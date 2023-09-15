@@ -1,0 +1,5 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.cdt.debug.ui,7.0.0.201102110609,"org.eclipse.cdt.debug.ui",1639077982256
+stopped,bundle,org.eclipse.cdt.debug.ui.memory.traditional,1.2.0.201102110609,"org.eclipse.cdt.debug.ui.memory.traditional",1639077982266
+stopped,bundle,org.eclipse.cdt.dsf,2.1.1.201102110609,"org.eclipse.cdt.dsf",1639077982276
+stopped,bundle,org.eclipse.cdt.debug.core,7.0.0.201102110609,"org.eclipse.cdt.debug.core",1639077982286

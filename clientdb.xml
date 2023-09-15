@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.magnolia.clientmodel:ClientModelRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.magnolia.clientmodel="http:///com/ibm/magnolia/clientmodel.ecore">
+  <workItemEditorHistory>
+    <internalContents date="2021-12-01T14:32:24.423-0600" description="7154: Create and compile VIP, ROMFS" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_Y3McQCBVEeyHXu_b96Cnkg"/>
+    </internalContents>
+    <internalContents date="2021-09-01T15:23:36.871-0500" description="6976: Dummy Task 3 for Automation" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_LUK9cAtfEeyVCdCA6cbLfQ"/>
+    </internalContents>
+    <internalContents date="2021-09-01T15:23:14.361-0500" description="6974: Dummy Defect 2 for Automation" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_ARhvYAtfEeyVCdCA6cbLfQ"/>
+    </internalContents>
+    <internalContents date="2021-09-01T15:22:06.595-0500" description="6973: Dummy Task 1 for Automation" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_q3LGoAteEeyVCdCA6cbLfQ"/>
+    </internalContents>
+    <internalContents date="2021-08-09T15:42:34.299-0500" description="6294: Fix Microns Input" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_z4N7MG1vEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T15:40:56.843-0500" description="6293: Update CATL languages" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_kOplUG1vEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T13:53:39.334-0500" description="6300: CATL Microns Communication" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_bY2sgG1zEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T13:50:01.575-0500" description="6301: Output Microns to SBC" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_1dc20G1zEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T13:40:41.228-0500" description="6299: GUI flags cases" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_74_MUG1yEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T13:18:03.679-0500" description="6297: WC version change" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_vXvHsG1xEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T12:37:51.392-0500" description="6296: Parameters for Amplitudes into Preset" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_TAV0UG1xEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T12:14:14.535-0500" description="6295: Add New Equation for Microns Porcentage" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_wgUV0G1wEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T11:57:02.433-0500" description="6298: Graph power Adjustments" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_MSltcG1yEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T11:43:08.077-0500" description="6292: New CATL update GUI" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_QMEn0G1vEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:57:21.078-0500" description="5869: remove old code" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_dTKc0OytEeq7Cp6g8v9tug"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:56:56.649-0500" description="5870: Updating Code" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_36coAOyuEeq7Cp6g8v9tug"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:56:38.123-0500" description="5881:  Adding fields to system configuration and presets " repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_ZDWZwO03EeqvCNVLjmg5eA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:56:26.927-0500" description="5882:  Reallocate memory from weld history from one block address section to another block address section " repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_kdbwEO06EeqvCNVLjmg5eA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:56:03.926-0500" description="5935:  Code Clean " repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_pZ9xUP6aEeqOau3-jhwAmA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:55:50.037-0500" description="5936:  Microns Amplitude Value  " repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="__QKzIP6bEeqOau3-jhwAmA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:55:36.748-0500" description="5973:  Redirect test amplitude  " repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_M8gxcAjbEeu3AMwrVdkbHA"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:55:18.179-0500" description="6000:  Reallocate History Memory back to the original " repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_p3wU0BIHEeukk8sgeymW4A"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:55:09.820-0500" description="6002:  Microns new metric value type " repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_EdDjABIJEeukk8sgeymW4A"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:54:49.781-0500" description="6021:  Sending the peak power in watts or percentage " repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_HqypIBRgEeuBOJVzrIiguw"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:54:37.902-0500" description="6056: WC Graph Micron and Peak Power measurements" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_FaFewB1IEeus55kQXuLz1w"/>
+    </internalContents>
+    <internalContents date="2021-08-09T08:49:16.573-0500" description="6727: Peak Power Serial Port Fix" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_T8240OTDEeuLlYI6aid0EQ"/>
+    </internalContents>
+    <internalContents date="2021-06-21T16:39:36.968-0500" description="3870: Parts/Min value in the Production screen does not change even after 1-2 min, unless the screen is refreshed" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_B6yVYCnTEemmgcgorE0sCg"/>
+    </internalContents>
+    <internalContents date="2021-06-21T16:38:55.430-0500" description="2962: UI is not responding (application freeze)" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_zmeAIJzFEeiecbI6FxdOGg"/>
+    </internalContents>
+    <internalContents date="2021-06-21T15:23:28.614-0500" description="6082: Setup build server for GSX P1 (VxWorks, Qt, NXP)" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_25shgCNoEeug3NPrxgqH1w"/>
+    </internalContents>
+    <internalContents date="2021-06-21T15:23:26.633-0500" description="6352: Build Jerry's Qt project on Builder5" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_NbosYH0ZEeu1X4oVCxSXAg"/>
+    </internalContents>
+    <internalContents date="2021-02-12T14:09:18.616-0600" description="6291: SBC Version change" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_FLdPgG1uEeu3w4sknqSZVA"/>
+    </internalContents>
+    <internalContents date="2020-12-10T13:17:44.992-0600" description="6020: Save graph data headers for amplitude and power to USB" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_Kn890BRgEeug3NPrxgqH1w"/>
+    </internalContents>
+    <internalContents date="2020-12-10T13:17:06.608-0600" description="6093: Update peak power value according to ps wattage" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_uT9aoCTwEeubqokY43ExRg"/>
+    </internalContents>
+    <internalContents date="2020-12-10T13:12:23.035-0600" description="6162: Modifications should be accessed by control level ea and higher" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_LQt78DWnEeulr_JqiwdjSA"/>
+    </internalContents>
+    <internalContents date="2020-12-10T12:27:33.498-0600" description="6163: Peak power percent units should have one digit after decimal point" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_nH3B8DWnEeulr_JqiwdjSA"/>
+    </internalContents>
+    <internalContents date="2020-12-10T12:26:56.590-0600" description="6049: Modify amplitude and power to show proper units and unit values" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_Bi72wBrGEeug3NPrxgqH1w"/>
+    </internalContents>
+    <internalContents date="2020-11-19T11:46:37.721-0600" description="6118: Version Change Update to 2.2.0.0 AC &amp; PC" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_z2PrkCnfEeuBC9QFckBrWg"/>
+    </internalContents>
+    <internalContents date="2020-11-19T11:44:51.501-0600" description="5939: Fundamental structure code" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_Z-zYIP7MEeqGGLDi9iIIGg"/>
+    </internalContents>
+    <internalContents date="2020-11-19T09:51:14.363-0600" description="5977: Remove Status Variables from Microns Screen" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_5vB9sAo_EeuAWs3l3bMNMA"/>
+    </internalContents>
+    <internalContents date="2020-11-19T07:51:38.024-0600" description="6121: Incorrect AC and PC versions when executing TCER &quot;UI_SW_Version_Identification_[2.2]Build_D20201118T1645&quot;" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_UAWLYSprEeuRToSTKsCXFw"/>
+    </internalContents>
+    <internalContents date="2020-11-10T10:04:54.571-0600" description="5763: Update RPi to latest OS and update Qt to 5.15" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_2nxMYM3nEeqiB-KkX1rsJQ"/>
+    </internalContents>
+    <internalContents date="2020-11-06T08:14:55.237-0600" description="6057: Language Update" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_AS5GAB1JEeus55kQXuLz1w"/>
+    </internalContents>
+    <internalContents date="2020-11-06T08:13:55.810-0600" description="6055: SBC Graph Titles" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_0oaGwB1GEeus55kQXuLz1w"/>
+    </internalContents>
+    <internalContents date="2020-11-06T08:12:14.923-0600" description="6034: Peak Power GUI update" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_Xg6iQBhbEeulsaUtko8wOg"/>
+    </internalContents>
+    <internalContents date="2020-11-06T08:10:38.721-0600" description="6013: Added Watts flag for receiving from SBC" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_uq1OIBMLEeudrrG0DtFeRA"/>
+    </internalContents>
+    <internalContents date="2020-11-06T08:08:58.534-0600" description="6004:  Update data types from weld history " repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_zhrVEBIKEeukk8sgeymW4A"/>
+    </internalContents>
+    <internalContents date="2020-11-06T08:07:18.956-0600" description="6003:  Microns new metric value type for SBC " repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_fz3GoBIKEeukk8sgeymW4A"/>
+    </internalContents>
+    <internalContents date="2020-11-06T08:04:02.497-0600" description="5972: Refresh Microns Test Key" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_oIOKQAjaEeu3AMwrVdkbHA"/>
+    </internalContents>
+    <internalContents date="2020-11-06T07:52:56.809-0600" description="5958: Version update to 11.35G" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_QrTiUP9iEeqBD8qu1Rl8Yg"/>
+    </internalContents>
+    <internalContents date="2020-11-03T16:12:40.565-0600" description="5778: AM5728_VSB Update missing files and folders" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_sBSOANZ7Eequ-cq5LScSCQ"/>
+    </internalContents>
+    <internalContents date="2020-11-03T10:19:53.208-0600" description="6054: Code cleanup" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_6J5XMB03Eeumuu38QwSulw"/>
+    </internalContents>
+    <internalContents date="2020-11-03T10:16:35.510-0600" description="6029: Read USB welddata log in both new and old format from SBC" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_veJM8BeWEeug3NPrxgqH1w"/>
+    </internalContents>
+    <internalContents date="2020-11-03T10:12:49.883-0600" description="6019: Save Amplitude and Power units selected format to USB" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_ZRImQBPHEeug3NPrxgqH1w"/>
+    </internalContents>
+    <internalContents date="2020-11-03T10:10:56.835-0600" description="6006: Change label to show appropriate string" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_oEkzQBJEEeuf_KUj1MDKUw"/>
+    </internalContents>
+    <internalContents date="2020-11-03T09:48:01.120-0600" description="5905: Add missing 11.35 file (check.h)" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_h-5IgPR2Eeq6LqPrvIawXg"/>
+    </internalContents>
+    <internalContents date="2020-11-03T09:47:18.843-0600" description="5748: Add new buttons" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_XlqUoMekEeqP7YFobfUxmA"/>
+    </internalContents>
+    <internalContents date="2020-10-22T07:08:25.486-0500" description="6018: Modify Weld History Utility to show selected power and amplitude units on printed weld results" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_s2JfABO8Eeug3NPrxgqH1w"/>
+    </internalContents>
+    <internalContents date="2020-10-19T07:44:09.417-0500" description="6001: Preset save and recall calibration" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_pr7C0BIIEeukk8sgeymW4A"/>
+    </internalContents>
+    <internalContents date="2020-10-16T07:09:25.670-0500" description="5747: Upgrade Memory for new variables" repository="https://Jazz.bucclm.com/ccm/">
+      <workItem itemId="_Ij3JYMekEeqP7YFobfUxmA"/>
+    </internalContents>
+  </workItemEditorHistory>
+  <queries/>
+  <queryViews/>
+</com.ibm.magnolia.clientmodel:ClientModelRoot>

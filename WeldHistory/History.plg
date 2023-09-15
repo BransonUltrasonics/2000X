@@ -1,0 +1,69 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: History - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/History.res" /d "_DEBUG" /d "_AFXDLL" "L:\WeldHistory_25oct\History.rc"" 
+Creating temporary file "C:\DOCUME~1\bsahu\LOCALS~1\Temp\6\RSP5.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/History.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"L:\WeldHistory_25oct\Browse.cpp"
+"L:\WeldHistory_25oct\Buttons.cpp"
+"L:\WeldHistory_25oct\GraphData.cpp"
+"L:\WeldHistory_25oct\History.cpp"
+"L:\WeldHistory_25oct\HistoryDoc.cpp"
+"L:\WeldHistory_25oct\HistoryView.cpp"
+"L:\WeldHistory_25oct\MainFrm.cpp"
+"L:\WeldHistory_25oct\NoOfWeld.cpp"
+"L:\WeldHistory_25oct\WeldData.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\bsahu\LOCALS~1\Temp\6\RSP5.tmp" 
+Creating temporary file "C:\DOCUME~1\bsahu\LOCALS~1\Temp\6\RSP6.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/History.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"L:\WeldHistory_25oct\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\bsahu\LOCALS~1\Temp\6\RSP6.tmp" 
+Creating temporary file "C:\DOCUME~1\bsahu\LOCALS~1\Temp\6\RSP7.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/History.pdb" /debug /machine:I386 /out:"Debug/History.exe" /pdbtype:sept 
+.\Debug\Browse.obj
+.\Debug\Buttons.obj
+.\Debug\GraphData.obj
+.\Debug\History.obj
+.\Debug\HistoryDoc.obj
+.\Debug\HistoryView.obj
+.\Debug\MainFrm.obj
+.\Debug\NoOfWeld.obj
+.\Debug\StdAfx.obj
+.\Debug\WeldData.obj
+.\Debug\History.res
+]
+Creating command line "link.exe @C:\DOCUME~1\bsahu\LOCALS~1\Temp\6\RSP7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Browse.cpp
+Buttons.cpp
+GraphData.cpp
+History.cpp
+HistoryDoc.cpp
+HistoryView.cpp
+MainFrm.cpp
+NoOfWeld.cpp
+WeldData.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+History.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

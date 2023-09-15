@@ -1,0 +1,2 @@
+-D__DIAB -Xsmall-const=0 -Xsmall-data=0 -Xforce-prototypes -Xansi 
+-Xstruct-min-align=1 -tMC68332FS:psos -c -g 

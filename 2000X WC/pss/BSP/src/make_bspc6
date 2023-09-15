@@ -1,0 +1,186 @@
+#* $Header:   K:\APPS\PVCS Pro\pss68k.222\BSP\src\MAKEBSP.__V   1.36   Apr 23 1999 10:57:40   lmarkure  $ */
+#* @(#) pSOSystem/68k-MRI V2.0.I: apps/xxxx/Makefile (hello 68k) 2.71 95/01/10 09:36:21 *
+#***********************************************************************
+#*                                                                     *
+#*   MODULE: src/Makefile                                              *
+#*   Last Modified : 6/15/99                                           *
+#*   By: Todd Main                                                     *
+#*   PURPOSE: Makefile to build a pSOSystem bsp library based on       *
+#*            PVCS Archives                                            *
+#*                                                                     *
+#*   Revision History                                                  *
+#*      Original : based on PSOS makefile                              *
+#*      5/14/96   Guy Vandevoordt: adapted for PVCS archives           *
+#*      7/11/97   LAM: added files ver 4.01 build                      *
+#*      8/15/97   LAM: added files ver 4.06 build                      *
+#*      9/18/97   LAM: updated for ver 4.12 build                      *
+#*     10/14/97   LAM: updated for ver 4.19 build                      *
+#*     10/28/97   LAM: updated for ver 4.22 build                      *
+#*     11/20/97   LAM: updated for ver 4.25 build                      *
+#*     11/20/97   LAM: updated for ver 4.25 build                      *
+#*     01/05/98   LAM: updated for ver 4.33 build                      *
+#*     07/30/98   LAM: updated for ver 5.0r build                      *
+#*     08/21/98   LAM: updated for ver 5.0w build                      *
+#*     10/26/98   LAM: updated for ver 5.ai build                      *
+#*     03/12/98   LAM: updated for ver 6.f0(new PVCS)		           *
+#*     04/25/99   LAM: updated to build to a label                     *
+#*     04/27/99   LAM: updated to build with diab                      *
+#*     04/30/99   OFI: generated dependancy files running scandeps *.c *
+#*     05/02/99   LAM: added m68332.h manually                         *
+#*     05/06/99   OFI: fixed dependancy files                          *
+#*     05/06/99   LAM: deleted gsblk and optimization                  *
+#*     05/10/99   LAM: only have alignment of 1 for structures         *
+#*     05/10/99   LAM: uncommented out a line                          *
+#*     05/10/99   JRJ: added root.h for serial.h, chg'd drive M to L   *
+#*     05/13/99   JRJ: Removed path from filename for GET.             *
+#*     06/15/99   JRJ: Replaced get option -t with -U to allow         *
+#*                     updating PVCS checkout to newer version label.  *
+#*     03/20/03   SCM: Added qvga_uart.o and it's dependencies         *
+#*     04/14/03   SCM: Added test code dependencies for qvga_uart.o    *
+#*     04/15/03   SCM: Added dependency ticks.h for qvga_uart.o        *
+#*     03-24-04   LAM  changed over to Citrix 2                        *
+#*     06-07-05   AT   Updated dependencies for qvga_uart.o            *
+#*---------------------------------------------------------------------*
+#*                                                                     *
+#*        Copyright 1991 - 1994, Integrated Systems, Inc.              *
+#*                      ALL RIGHTS RESERVED                            *
+#*                                                                     *
+#*   Permission is hereby granted to licensees of Integrated Systems,  *
+#*   Inc. products to use or abstract this computer program for the    *
+#*   sole purpose of implementing a product based on Integrated        *
+#*   Systems, Inc. products.   No other rights to reproduce, use,      *
+#*   or disseminate this computer program, whether in part or in       *
+#*   whole, are granted.                                               *
+#*                                                                     *
+#*   Integrated Systems, Inc. makes no representation or warranties    *
+#*   with respect to the performance of this computer program, and     *
+#*   specifically disclaims any responsibility for any damages,        *
+#*   special or consequential, connected with the use of this program. *
+#*                                                                     *
+#*---------------------------------------------------------------------*
+#*                                                                     *
+#*   Before using this Makefile, you must define environment variable  *
+#*   PSS_ROOT to point to the pSOSystem "root" directory.  You may     *
+#*   also need to change the definition of PSS_BSP to point to the     *
+#*   board support package you are using.  PSS_BSP must be the full    *
+#*   path name of the board support package.  Note: It need not be     *
+#*   located under PSS_ROOT as defaulted here.                         *
+#*                                                                     *
+#*   You can also define an environment variable called PSS_COMPLIB.   *
+#*   This may be used to link any additional library you want (for     *
+#*   example mcc68kab.lib).  Note: PSS_COMPLIB must contain the full   *
+#*   path name of the library.                                         *
+#*                                                                     *
+#***********************************************************************
+
+#-----------------------------------------------------------------------
+# PSS_APPINCS can be used to add non-standard include paths for the
+# application, such as paths to directories containing custom drivers.
+#-----------------------------------------------------------------------
+
+PSS_APPINCS= $(PERSONAL_DIR)
+#-----------------------------------------------------------------------
+#  PVCS directives
+#-----------------------------------------------------------------------
+
+.nomemswap
+
+.archive .c_v(.c -v$(LABEL))
+.archive .h_v(.h -v$(LABEL))
+.archive .s_v(.s -v$(LABEL))
+
+.path.h=$(PSS_APPINCS);$(PSS_ROOT)\include
+.path.c = $(PSS_BSP)\src
+.path.s = $(PSS_BSP)\src
+
+.path.c_v= D:\swlab\vmdb\2000Series\bsp\src
+
+.path.h_v= D:\swlab\vmdb\2000Series\inc; \
+           D:\swlab\vmdb\2000Series\include
+
+.path.s_v= D:\swlab\vmdb\2000Series\bsp\src
+
+#.h_v.h :
+#        get -U -q $(_SourceRev) $(_Source)($(_Target))
+#.c_v.c :
+#        get -U -q $(_SourceRev) $(_Source)($(_Target))
+#.s_v.s :
+#        get -U -q $(_SourceRev) $(_Source)($(_Target))
+
+
+
+include $(PSS_BSP)\bsp.mk
+
+CC    = dcc
+COPTS = -I$(PSS_ROOT)\include  -I$(PSS_APPINCS)
+COPTS_FILE2= -D__DIAB -Xstruct-min-align=1 -Xsmall-const=0 -Xsmall-data=0 -Xforce-prototypes -Xansi
+COPTS_FILE3= -tMC$(CPU)F$(DFP):psos -c -g
+
+AS         = das
+AOPTS = -Xmnem-emb -tMC$(CPU)F$(DFP):psos
+
+OBJS1 =  \
+         board.o qsm.o tpu.o misc.o cpu000.o  drv_conf.o
+OBJS2 = \
+        qvga_uart.o tick_isr.o vect000.o serial.o init.o nvram.o
+
+
+SRC_OBJ= $(OBJS1) $(OBJS2)
+
+LIB=     dar
+LIBOPTS= -qf
+LIBOPTS_SORT= -sR
+
+
+    $(PSS_BSP)\libbsp.a:  $(SRC_OBJ)
+	@rm -f $(PSS_BSP)\libbsp.a
+	echo $(OBJS1) > l.opt
+	echo $(OBJS2) >> l.opt
+	$(LIB) $(LIBOPTS) ../libbsp.a -@l.opt
+	$(LIB) $(LIBOPTS_SORT) ../libbsp.a
+	rm -f l.opt
+
+
+
+#UPDATE#
+board.o:	sysinit.h serial.h portable.h cibinfo.h bspfuncs.h psos.h \
+ 		    opcodes.h names.h bsp.h board.h m68332.h disi.h	types.h \
+            gsblk.h pna.h ser332.h comcntrl.h commnmsg.h
+nvram.o:    types.h board.h m68332.h
+qsm.o:      bsp.h types.h bspfuncs.h portable.h 332.h qsm.h spidd.h
+serial.o:   psos.h types.h portable.h m68332.h board.h root.h managerr.h bsp.h \
+            menu7a.h bspfuncs.h names.h serial.h comcntrl.h cibinfo.h commnmsg.h \
+            opcodes.h rxcharcv.h string.h
+tick_isr.o: bsp.h types.h bspfuncs.h psos.h portable.h board.h m68332.h \
+            configs.h psoscfg.h probecfg.h philecfg.h prepccfg.h prpccfg.h \
+            pnacfg.h psecfg.h pmontcfg.h drv_intf.h rxcharcv.h
+
+tpu.o:      portable.h types.h 332.h bsp.h bspfuncs.h wc_isr.h inports.h \
+            state.h memap.h inputs.h m68332.h
+drv_conf.o: sys_conf.h types.h sysvars.h bsp.h psos.h portable.h bspfuncs.h \
+            configs.h psoscfg.h probecfg.h philecfg.h prepccfg.h prpccfg.h pnacfg.h \
+            psecfg.h pmontcfg.h pna.h
+serial.h:   root.h
+qvga_uart.o: psos.h names.h opcodes.h qvga_uart.h screenmsg_touch.h portable.h ck_qsend.h \
+             ticks.h touchmsg_qvga.h ascii.h genrlmsg.h 
+
+#ENDUPDATE#
+
+
+
+# Rule for assembling s files
+
+.s.o:
+	(Silent)echo Assembling $(_Source)
+	(Extraline)$(AS) $(AOPTS) $(_Source)
+
+# Rule for compiling c files
+.c.o:
+	(Silent)echo Compiling $(_Source)
+	echo $(CC) $(COPTS) $(COPTS_FILE2) $(COPTS_FILE3) $(_Source)
+
+	(ExtraLine)$(CC) $(COPTS) $(COPTS_FILE2) $(COPTS_FILE3) $(_Source)
+
+
+
+

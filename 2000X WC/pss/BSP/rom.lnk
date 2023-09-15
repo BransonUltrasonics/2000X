@@ -1,0 +1,168 @@
+/* @(#) pSOSystem/68K V2.2.2: bsps/template/rom_diab.lnk (fads302) 2.33 98/04/10 08:25:02 */
+/* $Header:   K:\APPS\PVCS Pro\PSS68k.222\BSP\rom.lnv   1.2   Apr 05 1999 13:38:52   lmarkure  $ */
+/***********************************************************************/
+/*                                                                     */
+/*   MODULE:  rom.lnk                                                  */
+/*   DATE:    98/04/10                                                 */
+/*   PURPOSE: Linker commands for placing system in ROM                */
+/*                                                                     */
+/*---------------------------------------------------------------------*/
+/*                                                                     */
+/*           Copyright 1991 - 1998, Integrated Systems, Inc.           */
+/*                      ALL RIGHTS RESERVED                            */
+/*                                                                     */
+/*   Permission is hereby granted to licensees of Integrated Systems,  */
+/*   Inc. products to use or abstract this computer program for the    */
+/*   sole purpose of implementing a product based on Integrated        */
+/*   Systems, Inc. products.   No other rights to reproduce, use,      */
+/*   or disseminate this computer program, whether in part or in       */
+/*   whole, are granted.                                               */
+/*                                                                     */
+/*   Integrated Systems, Inc. makes no representation or warranties    */
+/*   with respect to the performance of this computer program, and     */
+/*   specifically disclaims any responsibility for any damages,        */
+/*   special or consequential, connected with the use of this program. */
+/*                                                                     */
+/***********************************************************************/
+
+/*---------------------------------------------------------------------*/
+/* Starting with pSOSystem/68k v2.2.1 a new "USEROM" option has been   */
+/* added for selecting components in the sys_conf.h file. This option  */
+/* replaces the old ramrc method of using the component code out of    */
+/* ROM for a RAM based application. The new use ROM method locates     */
+/* components from the ROM's configuration table, instead of relying   */
+/* on the user to edit a linker file to put in the addresses of the    */
+/* ROM components.                                                     */
+/*                                                                     */
+/* For this to work properly there must be a second pointer for the    */
+/* ROM's config table. This is the rom_anchor. When building a boot    */
+/* ROM (SC_BOOT_ROM=YES) both anchor and rom_anchor to point to the    */
+/* ROM's config table. If SC_BOOT_ROM is NO only the anchor is         */
+/* modified. Setting a component to USEROM will copy the components    */
+/* address from rom_anchor to anchor.                                  */
+/*                                                                     */
+/* anchor and rom_anchor must be the same addresses used when building */
+/* the ROM. The RAM containing the ROM's config tables must not be     */
+/* reused by the RAM based application if USEROM is used for any of    */
+/* the components. If RAM is so limited that the user must reuse the   */
+/* boot ROM's RAM area and use the components out of ROM, then the     */
+/* user must recreate the old ramrc method.                            */
+/*---------------------------------------------------------------------*/
+
+_VectorPage  =   0x100000        ;
+_anchor      =   0x100044       ; /* Put node anchor at $44 - $47 */
+_rom_anchor  =   0x100048       ; /* Used by USEROM to get ROM components */
+_start       =   0x0            ; /* Start Point of Code */
+
+MEMORY
+{
+    mem1: o=0x0           l=0x600    /* Free Memory for Vectors etc..  */
+    mem2: o=0x100000      l=0x40000
+    mem3: o=0x600         l=0xFFA00
+    mem4: o=0x200000      l=0x100000 /* second pair of flash chips */
+}
+
+/*---------------------------------------------------------------------*/
+/* All C, C++ and assembly files for pSOSystem/68k for the Diab Data   */
+/* tools use the sections .text, .data, and .bss. The numbered         */
+/* sections (_S0, _S1, _S8, _S9, _S13, and _S14) are for compatibility */
+/* with the GreenHills tools. Various libraries under                  */
+/* $PSS_ROOT/sys/libc use these numbered sections and will not be      */
+/* located properly in your binary image, if they are not retained in  */
+/* the linker command files. New code should not use the numbered      */
+/* sections.                                                           */
+/*                                                                     */
+/* NOTE: pSOSystem uses .bss as a zerovars section. And every address  */
+/* between bss_start and bss_end is zeroed by the BSP initialization   */
+/* code.                                                               */
+/*---------------------------------------------------------------------*/
+
+SECTIONS
+{
+    GROUP 0x0: {
+        vectors: {
+            *(_S0)                /* SECTION 0 is for VECTOR TABLE       */
+        }
+    }
+
+    /*-----------------------------------------------------------------*/
+    /* The BEGIN section must be the first section. It holds the       */
+    /* boot vector, the entry point for the code, and the HdwInit      */
+    /* function.                                                       */
+    /*                                                                 */
+    /* The hardware decodes the ROM at 0 on bootup. But, the ROM has   */
+    /* to be moved to another address by the BSP initialization code.  */
+    /* This is so we can change the vector table in RAM and the vector */
+    /* table is always at address 0 for the 68000.                     */
+    /*                                                                 */
+    /* We link the BEGIN code to be at address 0, so that the initial  */
+    /* PC in the boot vector points to the right location. Otherwise   */
+    /* we would jump to the address we're moving the ROM to and bus    */
+    /* error. We use the LOAD directive to place the output for the    */
+    /* BEGIN section at the beginning of the ROM address range, so we  */
+    /* don't have to do it by hand.                                    */
+    /*-----------------------------------------------------------------*/
+    start (TEXT) LOAD(ADDR(mem1)) : {
+        *(BEGIN)
+    } > mem1
+
+    /*-----------------------------------------------------------------*/
+    /* The .text section must be the last section in the ROM, since    */
+    /* the initial values for the initialized data will be placed in   */
+    /* the ROM immediately after the .text section.                    */
+    /*-----------------------------------------------------------------*/
+    .text ALIGN(0x10) (TEXT) : {
+        *(_S9)
+        *(.text)
+        *(.init)                  /* .init, .fini, and .eini are for */
+        *(.fini)                  /* C++ support. They must be next to */
+        *(.eini)                  /* each other in the order used here.*/
+        *(.rodata)
+        *(.rosdata)
+    } > mem3                      /* Try to fit the entire code in this  */
+                                  /* Given boundary.                     */
+
+    /*-----------------------------------------------------------------*/
+    /* The initialized data is linked to a RAM address, but the        */
+    /* actual data is stored after the .text section in the ROM. See   */
+    /* the DataStart/DataEnd/TextEnd comments below.                   */
+    /*-----------------------------------------------------------------*/
+    .data (DATA) LOAD(ADDR(.text) + SIZEOF(.text)) : {
+        *(.sdata)
+        *(.data)                  /* .data SECTION of 'C' Files.         */
+        *(_S1)                    /* Initialized Data.                   */
+        *(_S13)
+    } > mem2
+
+    .bss (BSS) : {
+        *(.bss)
+        *(.sbss)
+        *(_S14)
+    } > mem2
+
+    .lang : {
+        *(.lang)
+    } > mem4
+}
+
+_bss_start = ADDR(.bss);
+_bss_end = ADDR(.bss) + SIZEOF(.bss);
+
+/*---------------------------------------------------------------------*/
+/* Initialized data needs to be copied from ROM to RAM when the code is*/
+/* placed in ROM. It need not be done when the code is downloaded to   */
+/* RAM as the data is in the RAM already. DataStart and TextEnd are    */
+/* used to differentiate the ROM download and the RAM download. If ROM */
+/* download, TextEnd points to end of .text section, which is a ROM    */
+/* address. If RAM download, TextEnd point to DataStart. The           */
+/* initialization code then copies the initialized data to RAM if      */
+/* TextEnd != DataStart.                                               */
+/*---------------------------------------------------------------------*/
+_DataStart = ADDR(.data);
+_DataEnd   = ADDR(.data) + SIZEOF(.data);
+_TextEnd   = ADDR(.text) + SIZEOF(.text);
+
+/*---------------------------------------------------------------------*/
+/* Aligning FreeMemStart to 16 byte Boundary.                          */
+/*---------------------------------------------------------------------*/
+_FreeMemStart = (ADDR(.bss) + SIZEOF(.bss) + 15) & 0xFFFFFFF0;

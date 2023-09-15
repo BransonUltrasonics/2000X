@@ -1,0 +1,811 @@
+#* $Header:   D:/SWLab/VMdb/2000Series/App/MAKE_APP.__V   2.152   04 Sep 2008 20:16:24   ygupta  $ */
+#* @(#) pSOSystem/68k-MRI V2.0.I: apps/xxxx/Makefile (hello 68k) 2.71 95/01/10 09:36:21 *
+#******************************************************************************
+#*                                                                            * 
+#*   MODULE:  Makefile                                                        *
+#*   Last Modified : 8/29/96 Alpha_B_16 build                                 *
+#*   By: Todd Main                                                            *
+#*   DATE: 01/10/95                                                           *
+#*   PURPOSE: Makefile to build a pSOSystem application based on              *
+#*            PVCS Archives                                                   *
+#*                                                                            *
+#*   Revision History                                                         *
+#*      Original : based on PSOS makefile                                     *
+#*             4/23/96   Guy Vandevoordt: adapted for PVCS archives           *
+#*             5/7/96    Guy VAndevoordt: added files for Alpha B build       *
+#*             7/11/97   LAM: added files ver 4.01 build                      *
+#*             7/23/97   LAM: added files ver 4.03 build                      *
+#*             8/15/97   LAM: added files ver 4.06 build                      *
+#*             8/23/97   LAM: updated for ver 4.07 build                      *
+#*             8/27/97   LAM: updated for ver 4.08 build                      *
+#*             9/18/97   LAM: updated for ver 4.12 build                      *
+#*            10/14/97   LAM: updated for ver 4.19 build                      *
+#*            10/23/97   LAM: updated for ver 4.20 build                      *
+#*            10/29/97   LAM: updated for ver 4.22 build                      *
+#*            11/05/97   LAM: updated for ver 4.22 build again                *
+#*            11/20/97   LAM: updated for ver 4.25 build                      *
+#*            12/04/97   LAM: updated for ver 4.28 build                      *
+#*            01/05/97   LAM: updated for ver 4.33 build                      *
+#*            02/11/98   LAM: updated for ver 4.37 build                      *
+#*            05/01/98   BJB: added instructions for C++ modules              *
+#*            06/25/98   LAM: updated for ver 5.0j build                      *
+#*            07/30/98   LAM: updated for ver 5.0r build                      *
+#*            08/03/98   LAM: updated for ver 5.0s build,deleted library.obj  *
+#*            08/19/98   BJB: Added new file vfscrn.c                         *
+#*            08/21/98   LAM: updated for ver 5.0w build                      *
+#*            10/09/98   LAM: updated for ver 5.af build(116 c files)         *
+#*            12/01/98   BJB: Modified C++ compiler switches to prevent       *
+#*                            meaningless warning messages                    *
+#*            03/12/99   LAM: updated for ver 6.f0 build(New PVCS)            *
+#*            04/21/99   OFI: Fixed for C++;edit CCPPSOS macro                *
+#*            04/27/99   LAM: updated for diab                                *
+#*            04/30/99   OFI  Ran scandeps *.c, generated dependancy structure*
+#*            05/06/99   OFI  Fixed digout.o                                  *
+#*            05/11/99   JRJ  Changed drive M to drive L, removed space in    *
+#*                            GET command line just before ($(_Target)),      *
+#*                            Removed path from filename for GET.             *
+#*            05/17/99   JRJ  Added dependency ctype.h to fmtprint.o          *
+#*            05/28/99   LAM  deleted unused files menupral.o and menupsal.o  *
+#*            06/08/99   OFI  Added param.h to alrminfo.o and state.h to      *
+#*                            vpreset5.o                                      *
+#*            06/15/99   JRJ  Changed -t to -U option for get statements      *
+#*            08/16/99   LAM  deleted unused file menucaal.o                  *
+#*            10/01/99   LAM  deleted unused initcopy.o                       *
+#*            10/15/99   LAM  deleted unused dpmanger.h                       *
+#*            12/16/99   LAM  deleted unused profile.o & .h and error         *
+#*                              handling code                                 *
+#*            02/16/00   OFI  deleted features.o & .h                         *
+#*            02/23/00   OFI  deleted features.o from                         *
+#*                            PSS_APPOBJS8                                    *
+#*            04-11-00   JZ   merged Lang to trunk                            *
+#*            05/15/00   LAM  deleted unused errormsg.h error handling code   *
+#*            05/30/00   LAM  added digout.h to actnrvam.o dependencies       *
+#*            06/21/00   AS   added dups files                                *
+#*            06/23/00   AS   removed reference to features.o                 *
+#*            06/23/00   LAM  moved xmininit.o up a group                     *
+#*            06/30/00   AS   added dependecies for dups object files         *
+#*            07/07/00   SRP  added dups_hornscan   dups object files         *
+#*            07/13/00   DJL  added battram.h to alarms.o                     *
+#*            08/09/00   LAM  updated dependencies                            *
+#*            08/09/00   LAM  removed float.h from dependencies               *
+#*            08/11/00   LAM  fixed command.c and dups file dependencies      *
+#*            08/11/00   RBH  fixed command.o and preset.o dependencies       *
+#*            08/14/00   AT   fixed dups_manager.o dependencies               *
+#*            08/14/00   AT   fixed menu3.o dependencies                      *
+#*            08/28/00   AT   fixed dups_manager.o dependencies               *
+#*            08/28/00   AT   fixed dups_manager.o dependencies               *
+#*            08/28/00   LAM  fixed dups_api.o dependencies                   *
+#*            08/29/00   AT   fixed digout.o dependencies                     *
+#*            09/01/00   LAM  updated dependencies using scan_app             *
+#*            09/13/00   AT   command.o - dups.h                              *
+#*            09/28/00   LAM  updated dependences using scan_app              *
+#*            10/02/00   SCM  Fixed dups_intf.o dependencies.                 *
+#*            10/04/00   AT   dups_api.o - state.h                            *
+#*            10/04/00   AT   battram.o dependencies                          *
+#*            10/04/00   SCM  Updated vpreset1.o dependencies.                *
+#*            10/19/00   LAM  Updated dependencies using scan_app             *
+#*            05/01/01   LAM  Updated dependencies using scan_app for 8.1S    *
+#*            05/04/01   DJL  Added rdyweld1.h to actnvram.o for a build      *
+#* 2.124      09-12-01   BEK  Added menu8 for special 8.3S                    *
+#*            04-11-03   BEK  Move 2.123.2.1 to tip as 2.123 for 8.10 build   *
+#* 2.126      04-15-03   BEK  Add iotest332.h to rxcharcv.o dependents        *
+#* 2.126.1.0  08-06-03   BEK  Merged 2.123.1.0 and 2.126 as 2.126.1.0         *
+#*                            -Add iotest332.h to rxcharcv.o dependents       *
+#*            03/20/03   SCM  Added qvga_task.o and updated other dependencies*
+#*            05/19/03   SCM  Added more dependencies for QVGA                *
+#*            05/19/03   SCM  Added qvgapreset.o for QVGA                     *
+#*            05/19/03   SCM  Added qvgadiagnostics.o for QVGA                *
+#*            07/14/03   SCM  Added more dependencies for QVGA                *
+#*            07/18/03   SCM  Added qvgacalib.o and qvgasensorcalib.o for QVGA*
+#*            07/24/03   SCM  Added more dependencies for QVGA                *
+#* 2.127      07-25-03   LAM  merged 8.10 with TS01                           *
+#*            08/01/03   SCM  Added qvgarunresultoption.o for QVGA            *
+#*            08/19/03   SCM  Added more dependencies for QVGA                *
+#* 2.131      12-08-03   BEK  Merged 9.00A label & Ver8.20 label to create    *
+#*                             2.131 for Ver9.00b build                       *
+#*                                                                            *
+#* 2.132      01/06/03   SCM  Added dependencies for Host Commands (Ver-9)    *
+#* 2.133      01-26-04   BEK  Add Testing.c                                   *
+#* 2.134      03-24-04   LAM  changed over to Citrix 2                        *
+#* 2.134.1    04-02-04   LAM  changed over to Citrix 2 for version 8.22                        *
+#*                                                                            *
+#* 2.136      04-16-04   SCM  Added dependencies for 'Custom Actuator'        *
+#* 2.137      04-19-04   SCM  Fixed merge related problems in make file.Added *
+#*                            missing object files testing.o and menu8.o      *
+#* 2.138      05-12-04   SCM  Fixed dependencies for 'Custom actuator' fixes  *
+#*                            including battram.o  and absolute.o             *
+#* 2.139      06-02-04   SCM  Added new object file for version.c             *
+#* 2.140      06-14-04   SCM  Added dependencies for 'Preset Name in Header'  *
+#*                            phase (version_change.h for root.o)             *
+#* 2.141      07-05-04   SCM  Added dependencies for miscellaneous files      *
+#* 2.142      07-19-04   SCM  Updated dependencies for command.o              *
+#* 2.143      08-25-04   SCM  Updated dependencies for menu0.o                *
+#* 2.144      04-26-05   LAM  removed pwrcalb, and slopeint                   *
+#* 2.145      05-12-05   AT   Updated dependencies for qvga_task.o            *
+#* 2.146      06-07-05   AT   Updated dependencies for command.o              *
+#* 2.147      06-10-05   AT   Modified to integrate with Excel strings.       *
+#* 2.148      09-10-05   AT   Added util.h to dups_manager dependencies.      *
+#* 2.149      09-10-05   AT   Added param.h and selctkey.h to dups_manager dependencies.      *
+#* 2.150      11-01-05   AT   Fixed dependencies for Ver10.0k files.          *
+#* 2.151      01-12-06   LAM  Fixed dependencies for Ver10.MH04 files.          *
+#* 2.152      09-04-08   ygupta Removed unused files and Excel file for Multi Lang.  *
+#*----------------------------------------------------------------------------*
+#*                                                                     ********
+#*                                                                     *
+#*                                                                     *
+#*---------------------------------------------------------------------*
+#*                                                                     *
+#*        Copyright 1991 - 1994, Integrated Systems, Inc.              *
+#*                      ALL RIGHTS RESERVED                            *
+#*                                                                     *
+#*   Permission is hereby granted to licensees of Integrated Systems,  *
+#*   Inc. products to use or abstract this computer program for the    *
+#*   sole purpose of implementing a product based on Integrated        *
+#*   Systems, Inc. products.   No other rights to reproduce, use,      *
+#*   or disseminate this computer program, whether in part or in       *
+#*   whole, are granted.                                               *
+#*                                                                     *
+#*   Integrated Systems, Inc. makes no representation or warranties    *
+#*   with respect to the performance of this computer program, and     *
+#*   specifically disclaims any responsibility for any damages,        *
+#*   special or consequential, connected with the use of this program. *
+#*                                                                     *
+#*---------------------------------------------------------------------*
+#*                                                                     *
+#*   Before using this Makefile, you must define environment variable  *
+#*   PSS_ROOT to point to the pSOSystem "root" directory.  You may     *
+#*   also need to change the definition of PSS_BSP to point to the     *
+#*   board support package you are using.  PSS_BSP must be the full    *
+#*   path name of the board support package.  Note: It need not be     *
+#*   located under PSS_ROOT as defaulted here.                         *
+#*                                                                     *
+#*   You can also define an environment variable called PSS_COMPLIB.   *
+#*   This may be used to link any additional library you want (for     *
+#*   example mcc68kab.lib).  Note: PSS_COMPLIB must contain the full   *
+#*   path name of the library.                                         *
+#*                                                                     *
+#***********************************************************************
+
+#-----------------------------------------------------------------------
+# PSS_DRVOBJS is a list of drivers to be added to the OS, above and
+# beyond those included in the pSOSystem board-support package.  (The
+# driver configuration file drv_conf.o must always be included in this
+# list.)
+#-----------------------------------------------------------------------
+#PSS_DRVOBJS = drv_conf.o
+
+#-----------------------------------------------------------------------
+# PSS_APPINCS can be used to add non-standard include paths for the
+# application, such as paths to directories containing custom drivers.
+#-----------------------------------------------------------------------
+
+PSS_APPINCS= $(PERSONAL_DIR)
+
+#---------------------------------------------------------------------
+# DRV_LIB?s are the libraries that you want to link with your
+# application like all the networking libraries.
+#
+# So set DRV_LIB1....DRV_LIB5 with what ever libraries you intend to
+# link.
+# DRV_LIB1 =
+# DRV_LIB2 =
+# DRV_LIB3 =
+# DRV_LIB4 =
+# DRV_LIB5 =
+#---------------------------------------------------------------------
+#-----------------------------------------------------------------------
+# PSS_COMPLIB specifies libraries to be searched.  These are specified
+# as command-line options:
+#
+# By default PSS_COMPLIB is set to include the appropriate libc library
+# If you need any other libraries, you can add them.
+#
+#-----------------------------------------------------------------------
+PSS_COMPLIB = -lc
+
+#---------------------------------------------------------------------
+# APP_LIB?s are the libraries that will contain the
+# compiled application code and Library to be linked with Application
+#
+# So set APP_LIB1....APP_LIB5 with what ever libraries you intend to
+# link.
+# APP_LIB1 =
+# APP_LIB2 =
+# APP_LIB3 =
+# APP_LIB4 =
+# APP_LIB5 =
+#---------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------
+#  PVCS directives
+#-----------------------------------------------------------------------
+
+.nomemswap
+
+.archive .c_v(.c -v$(LABEL))
+.archive .h_v(.h -v$(LABEL))
+.archive .s_v(.s -v$(LABEL))
+.archive .cpv(.cpp -v$(LABEL))
+.archive .xls_v(.xls -v$(LABEL))
+
+.path.h=l:\332\inc;$(PSS_ROOT)\include
+.path.c=l:\332\app;$(PSS_ROOT)\configs\std
+.path.s=$(PSS_ROOT)\configs\std
+.path.o=l:\332\app;$(PSS_ROOT)\configs\std;$(PSS_ROOT)\bsp\src
+#.path.ut=..\ut
+
+.path.c_v= d:\swlab\vmdb\2000Series\APP\;d:\swlab\vmdb\2000Series\std
+
+.path.h_v= d:\swlab\vmdb\2000Series\inc;d:\swlab\vmdb\2000Series\include
+                                                                          
+.path.s_v= d:\swlab\vmdb\2000Series\std
+
+
+.path.CPv= d:\swlab\vmdb\2000Series\app
+
+#-----------------------------------------------------------------------
+# PSS_APPOBJS is a list of object files for the application.
+#-----------------------------------------------------------------------
+#
+#
+
+PSS_APPOBJS1= 1ms_data.o absolute.o actnvram.o
+PSS_APPOBJS2= alarms.o alrminfo.o
+PSS_APPOBJS3= alsetup.o battram.o beep.o
+PSS_APPOBJS4= command.o comm_crc.o cont.o
+PSS_APPOBJS5= ckptgbuf.o ck_qsend.o collapse.o
+PSS_APPOBJS6= digout.o drawscrn.o
+PSS_APPOBJS7= dups_intf.o dups_api.o dups_manager.o dups_hornscan.o
+PSS_APPOBJS8= encoder.o energy.o 
+PSS_APPOBJS9= estop.o fmtprint.o
+PSS_APPOBJS10= fmtstrs.o fpk_task.o fpsmangr.o 
+PSS_APPOBJS11= getmsg.o graphs.o grd_det.o 
+PSS_APPOBJS12= rdyweld1.o initweld.o inports.o iotest332.o
+PSS_APPOBJS13= interpol.o led.o limits.o 
+PSS_APPOBJS14= mansensr.o menu.o menu0.o
+PSS_APPOBJS15= menu1.o 
+PSS_APPOBJS16= 
+PSS_APPOBJS17= menu2.o
+PSS_APPOBJS18= menu2a.o menu3.o menu4.o
+PSS_APPOBJS19= menu5.o menu6.o menu7.o
+PSS_APPOBJS20= menu7a.o menu8.o menucalb.o
+PSS_APPOBJS21= menudbug.o 
+PSS_APPOBJS22= menuhorn.o  
+PSS_APPOBJS23= menupass.o menutest.o 
+PSS_APPOBJS24= min_mode.o
+PSS_APPOBJS25= objects.o obj_tabl.o outports.o
+PSS_APPOBJS26= peakpwr.o powrdwn.o preset.o
+PSS_APPOBJS27= prnmangr.o 
+PSS_APPOBJS28= prsetprn.o pr_print.o
+PSS_APPOBJS29= pr_label.o psnvram.o qvgadiagnostics.o
+PSS_APPOBJS30= qvgamenu.o qvgapreset.o qvga_task.o
+PSS_APPOBJS31= qvgacalib.o qvgasensorcalib.o ready.o root.o 
+PSS_APPOBJS32= rtclock.o runresults.o run_task.o rxcharcv.o 
+PSS_APPOBJS33= sc.o selctkey.o qvgarunresultoption.o
+PSS_APPOBJS34= snsrcalb.o spidd.o
+PSS_APPOBJS35= statedrv.o 
+PSS_APPOBJS36= states.o 
+PSS_APPOBJS37= sysmangr.o  testing.o 
+PSS_APPOBJS38= tickldog.o time.o
+PSS_APPOBJS39= timer.o util.o
+PSS_APPOBJS40= version.o vpreset1.o
+PSS_APPOBJS41= vpreset2.o vpreset3.o
+PSS_APPOBJS42= vpreset4.o vpreset5.o
+PSS_APPOBJS43= wc_isr.o weldhold.o
+PSS_APPOBJS44= weldmngr.o  keypad.o
+PSS_APPOBJS45= xception.o xminint.o
+
+
+#-----------------------------------------------------------------------
+# Target "all" defines what is made when make is invoked with no
+# arguments.  You may want to change this if you are building something
+#ielse all the time.  The possible targets are:
+#  ram.elf   - OS and application together in RAM
+#  rom.elf   - OS and application together in ROM
+#  os.elf    - OS only, downloaded to RAM
+#  app.elf   - application only, downloaded to RAM
+# Targets with a ".elf extension are ELF format.  You may build any of
+# these in S-record format instead by substituting a ".hex" extension,
+# such as "ram.hex" or "ram.elf".
+#-----------------------------------------------------------------------
+
+all: rom.elf rom.hex
+
+#-----------------------------------------------------------------------
+# These next 3 lines must come before any of the application rules.
+#-----------------------------------------------------------------------
+PSS_CONFIG=$(PSS_ROOT)\configs\std
+include $(PSS_BSP)/bsp.mk
+include $(PSS_CONFIG)\config.mk9
+
+clean:
+    @rm -f rom.coff *.cfe *.cof *.elf ram.* rom.*
+    @rm -f *.o *.map *.hex *.x *.opt *.L cmd.lnk app.*
+
+#------------------------------------------------------------------------------
+#   DO NOT EDIT BEHIND THIS LINE !!!!!
+#------------------------------------------------------------------------------
+#UPDATE#
+sysinit.o:	sys_conf.h types.h sysvars.h bsp.h psos.h portable.h \
+		bspfuncs.h pna.h configs.h psoscfg.h probecfg.h philecfg.h \
+		prepccfg.h prpccfg.h pnacfg.h psecfg.h pmontcfg.h apdialog.h \
+		version.h machine.h xception.h serial.h root.h
+prepccfg.o:	sys_conf.h types.h sysvars.h bsp.h psos.h portable.h
+pollio.o:	types.h stdarg.h bsp.h bspfuncs.h apdialog.h
+psoscfg.o:	sys_conf.h types.h sysvars.h bsp.h psos.h portable.h \
+		bspfuncs.h configs.h psoscfg.h probecfg.h philecfg.h \
+		prepccfg.h prpccfg.h pnacfg.h psecfg.h pmontcfg.h
+gsblkcfg.o:	bsp.h types.h pna.h gsblk.h sys_conf.h sysvars.h psos.h \
+		portable.h
+probecfg.o:	sys_conf.h types.h sysvars.h bsp.h psos.h portable.h \
+		bspfuncs.h machine.h
+1ms_data.o:	psos.h types.h portable.h preset.h menu.h math.h \
+		weld_obj.h state.h time.h util.h stddef.h graphs.h \
+		weld_msg.h commnmsg.h opcodes.h names.h menu4.h dups_api.h \
+		battram.h
+absolute.o:	names.h psos.h types.h portable.h error.h obj_tabl.h \
+		menu.h preset.h wldstate.h commnmsg.h opcodes.h state.h \
+		weld_obj.h time.h statedrv.h weldhold.h inputs.h 332.h \
+        memap.h inports.h outports.h
+pr_text.o:	portable.h types.h
+alarms.o:	portable.h types.h menu.h string.h weld_obj.h psos.h \
+		preset.h state.h time.h genalarm.h alarms.h fmtstrs.h \
+		battram.h alsetup.h sc.h menu7a.h
+alarmtxt.o:	portable.h types.h menu.h
+battram.o:	portable.h types.h comm_crc.h spidd.h weld_obj.h psos.h \
+		preset.h menu.h state.h time.h battram.h rtclock.h menu7a.h \
+		ready.h alarms.h actnvram.h psnvram.h dups_api.h string.h \
+		param.h snsrcalb.h selctkey.h commnmsg.h opcodes.h names.h \
+		keypad.h root.h error.h menu7.h menu1.h alsetup.h sysmangr.h \
+        screenmsg_touch.h
+comm_crc.o:	portable.h types.h comm_crc.h 
+beep.o:	portable.h types.h beep.h preset.h menu.h state.h statedrv.h \
+        outports.h
+inports.o:	psos.h types.h portable.h digout.h inputs.h memap.h 332.h \
+		inports.h state.h preset.h menu.h kpresmsg.h commnmsg.h \
+		opcodes.h names.h keypad.h root.h ready.h alarms.h led.h
+cont.o:	names.h psos.h types.h portable.h error.h obj_tabl.h menu.h \
+		preset.h wldstate.h commnmsg.h opcodes.h state.h weld_obj.h \
+		time.h statedrv.h weldhold.h
+rdyweld1.o:	psos.h types.h portable.h state.h preset.h menu.h beep.h \
+		weld_obj.h time.h alarms.h weldhold.h menu4.h alsetup.h \
+		graphs.h weld_msg.h commnmsg.h opcodes.h names.h \
+		ready.h digout.h mansensr.h timer.h error.h
+ckptgbuf.o:	psos.h types.h portable.h ckptgbuf.h ck_qsend.h ticks.h
+ck_qsend.o:	psos.h types.h portable.h ck_qsend.h ticks.h alarms.h \
+		names.h ready.h util.h stddef.h preset.h menu.h
+collapse.o:	names.h psos.h types.h portable.h error.h obj_tabl.h \
+		menu.h preset.h wldstate.h commnmsg.h opcodes.h state.h \
+		weld_obj.h time.h statedrv.h weldhold.h
+alrminfo.o:	portable.h types.h prepc.h limits.h float.h stdarg.h \
+		assert.h ctype.h errno.h locale.h stddef.h stdio.h stdlib.h \
+		string.h menu.h error.h genalarm.h alarms.h keypad.h root.h \
+		display.h sc.h param.h state.h
+alsetup.o:	portable.h types.h prepc.h limits.h float.h stdarg.h \
+		assert.h ctype.h errno.h locale.h stddef.h stdio.h stdlib.h \
+		string.h menu.h weld_obj.h psos.h preset.h state.h time.h \
+		error.h root.h genalarm.h alarms.h keypad.h display.h \
+		fmtstrs.h selctkey.h commnmsg.h opcodes.h names.h param.h \
+		alsetup.h
+psnvram.o:	portable.h types.h string.h 332.h qsm.h menu.h psnvram.h \
+		preset.h ticks.h alarms.h ready.h spidd.h
+util.o:	portable.h types.h actnvram.h preset.h menu.h string.h \
+		param.h psnvram.h spidd.h menu7a.h state.h mansensr.h \
+		digout.h util.h stddef.h
+menu7.o:	psos.h types.h portable.h time.h menu.h display.h error.h \
+		preset.h param.h psnvram.h kpresmsg.h commnmsg.h opcodes.h \
+		names.h keypad.h root.h selctkey.h menupass.h weld_obj.h \
+		state.h rtclock.h menu7a.h ready.h alarms.h getmsg.h serial.h \
+		  graphs.h weld_msg.h menu4.h statedrv.h \
+		rdyweld1.h
+digout.o:	portable.h types.h preset.h menu.h outports.h memap.h \
+		inputs.h 332.h led.h mansensr.h digout.h state.h ticks.h \
+		psos.h
+drawscrn.o: stdarg.h stdio.h string.h psos.h drawscrn.h qvga_uart.h       
+dups_manager.o:	portable.h types.h dups_api.h battram.h preset.h \
+		menu.h dups.h psos.h ascii.h ready.h alarms.h root.h \
+		psnvram.h state.h rtclock.h keypad.h getmsg.h fpk_task.h \
+		digout.h util.h param.h selctkey.h
+dups_intf.o:	psos.h types.h portable.h dups_api.h battram.h preset.h \
+		menu.h dups.h 332.h qsm.h ascii.h
+dups_api.o:	dups_api.h battram.h portable.h types.h preset.h menu.h \
+		psos.h dups.h param.h string.h fpk_task.h state.h
+dups_hornscan.o:	dups_api.h battram.h portable.h types.h preset.h \
+		menu.h psos.h dups.h param.h graphs.h weld_obj.h state.h \
+		time.h weld_msg.h commnmsg.h opcodes.h names.h  \
+		root.h string.h fpk_task.h keypad.h digout.h getmsg.h ticks.h \
+		inputs.h qvga_task.h menu5.h qvgamenu.h touchmsg_qvga.h
+encoder.o:	portable.h types.h
+energy.o:	names.h psos.h types.h portable.h error.h obj_tabl.h \
+		menu.h preset.h wldstate.h commnmsg.h opcodes.h state.h \
+		weld_obj.h time.h statedrv.h weldhold.h
+vpreset3.o:	psos.h types.h portable.h prepc.h limits.h float.h \
+		stdarg.h assert.h ctype.h errno.h locale.h stddef.h stdio.h \
+		stdlib.h string.h error.h preset.h menu.h param.h ready.h \
+		alarms.h vpreset1.h vpreset2.h vpreset3.h vpreset4.h \
+		vpreset5.h
+vpreset4.o:	psos.h types.h portable.h prepc.h limits.h float.h \
+		stdarg.h assert.h ctype.h errno.h locale.h stddef.h stdio.h \
+		stdlib.h string.h error.h preset.h menu.h param.h ready.h \
+		alarms.h vpreset1.h vpreset2.h vpreset3.h vpreset4.h \
+		vpreset5.h actnvram.h util.h
+vpreset5.o:	psos.h types.h portable.h prepc.h limits.h float.h \
+		stdarg.h assert.h ctype.h errno.h locale.h stddef.h stdio.h \
+		stdlib.h string.h state.h error.h preset.h menu.h param.h \
+		ready.h alarms.h sc.h vpreset1.h vpreset2.h vpreset3.h \
+		vpreset4.h vpreset5.h actnvram.h snsrcalb.h menu1.h
+weldhold.o:	names.h portable.h types.h error.h state.h menu.h \
+		preset.h weld_obj.h psos.h time.h alarms.h weldhold.h timer.h \
+		statedrv.h digout.h outports.h memap.h inputs.h 332.h led.h \
+		mansensr.h util.h stddef.h ready.h menu7a.h dups_api.h \
+		battram.h
+wc_isr.o:	portable.h types.h encoder.h mansensr.h preset.h menu.h \
+		state.h menutest.h statedrv.h interpol.h inports.h memap.h \
+		inputs.h 332.h timer.h error.h menuhorn.h  root.h qsm.h \
+		actnvram.h   weld_obj.h psos.h time.h spidd.h
+keypad.o:	psos.h types.h portable.h bsp.h bspfuncs.h root.h names.h \
+		commnmsg.h opcodes.h keypad.h kpresmsg.h memap.h inputs.h \
+		332.h
+xception.o:	psos.h types.h portable.h run_task.h root.h names.h \
+		332.h battram.h preset.h menu.h time.h xception.h xminint.h
+xminint.o:	portable.h types.h psos.h time.h xminint.h
+ready.o:	psos.h types.h portable.h string.h names.h error.h state.h \
+		menu.h preset.h beep.h wldstate.h commnmsg.h opcodes.h \
+		weld_obj.h time.h alarms.h statedrv.h keypad.h root.h \
+		selctkey.h param.h util.h stddef.h weldhold.h display.h \
+		genalarm.h menu4.h alsetup.h battram.h menu1.h graphs.h \
+		weld_msg.h menuhorn.h kpresmsg.h getmsg.h encoder.h \
+		dups_api.h ready.h digout.h mansensr.h led.h timer.h 		 
+weldmngr.o:	psos.h types.h portable.h string.h actnvram.h names.h \
+		opcodes.h preset.h menu.h prsetmsg.h commnmsg.h psnvram.h \
+		menu1.h ipsatype.h weldmngr.h wldstate.h state.h weld_obj.h \
+		time.h genrlmsg.h graphs.h weld_msg.h keypad.h \
+		root.h beep.h fpkp_msg.h fmtstrs.h   statedrv.h \
+		selctkey.h param.h error.h snsrcalb.h alarms.h ready.h \
+		digout.h led.h getmsg.h display.h rtclock.h \
+		alsetup.h mansensr.h   util.h stddef.h \
+		dups_api.h battram.h menu7a.h menu3.h obj_tabl.h ipscdmsg.h \
+		cibinfo.h ipscmdty.h ck_qsend.h ticks.h menu4.h
+statedrv.o:	names.h psos.h types.h portable.h error.h menu.h \
+		preset.h wldstate.h commnmsg.h opcodes.h state.h weld_obj.h \
+		time.h statedrv.h alarms.h keypad.h root.h selctkey.h param.h \
+		ticks.h ready.h weldhold.h timer.h snsrcalb.h inports.h \
+		memap.h inputs.h 332.h mansensr.h timemode.h energy.h \
+		peakpwr.h collapse.h absolute.h grd_det.h cont.h util.h \
+		stddef.h digout.h graphs.h weld_msg.h fpk_task.h \
+		menu4.h menuhorn.h actnvram.h
+states.o:	portable.h types.h state.h keyPad.h root.h selctkey.h \
+		commnmsg.h opcodes.h names.h menu.h param.h error.h \
+		mansensr.h preset.h states.h 332.h qsm.h digout.h led.h \
+		beep.h weld_obj.h psos.h time.h weld.h genalarm.h alarms.h \
+		getmsg.h powrdwn.h weldhold.h spidd.h \
+		menuhorn.h menucalb.h util.h stddef.h dups_api.h battram.h \
+		rdyweld1.h ready.h statedrv.h snsrcalb.h psnvram.h sc.h \
+		display.h
+menu6.o:	portable.h types.h menu.h error.h display.h fmtstrs.h \
+		preset.h param.h string.h kpresmsg.h commnmsg.h opcodes.h \
+		names.h keypad.h root.h actnvram.h rtclock.h dups_api.h \
+		battram.h dups.h
+menutext.o:	portable.h types.h menu.h
+menudbug.o:	prepc.h limits.h float.h stdarg.h assert.h ctype.h \
+		errno.h locale.h stddef.h stdio.h stdlib.h string.h param.h \
+		preset.h portable.h types.h menu.h menu3.h menu6.h snsrcalb.h \
+		state.h statedrv.h rtclock.h psnvram.h actnvram.h keypad.h \
+		root.h getmsg.h menu7a.h command.h graphs.h psos.h weld_obj.h \
+		time.h weld_msg.h commnmsg.h opcodes.h names.h \
+		battram.h alarms.h beep.h dups_api.h dups.h
+command.o:	psos.h types.h portable.h string.h names.h opcodes.h \
+		serial.h root.h run_task.h ck_qsend.h ticks.h command.h \
+		sysmangr.h param.h psnvram.h menu6.h genrlmsg.h commnmsg.h \
+		resetmsg.h ipscdmsg.h weld_obj.h preset.h menu.h state.h \
+		time.h cibinfo.h ipscmdty.h selctkey.h keypad.h error.h \
+		nvm_msg.h battram.h ckptgbuf.h kpresmsg.h memap.h inputs.h \
+		332.h fpdatmsg.h menu3.h limits.h menu7a.h menu7.h led.h \
+		alsetup.h ready.h menu1.h actnvram.h snsrcalb.h menu4.h \
+		menu2.h rtclock.h ipsatype.h getmsg.h graphs.h  \
+		weld_msg.h util.h stddef.h alarms.h dups.h dups_api.h drawscrn.h \
+        weldmngr.h qvga_task.h qvgamenu.h
+estop.o:	portable.h types.h state.h menu.h beep.h root.h \
+		digout.h statedrv.h keypad.h selctkey.h commnmsg.h opcodes.h \
+		names.h param.h error.h kpresmsg.h getmsg.h
+fmtprint.o:	ctype.h string.h math.h graphs.h psos.h types.h \
+		portable.h weld_obj.h preset.h menu.h state.h time.h \
+		weld_msg.h commnmsg.h opcodes.h names.h
+fmtstrs.o:	prepc.h limits.h float.h stdarg.h assert.h ctype.h \
+		errno.h locale.h stddef.h stdio.h stdlib.h string.h \
+		portable.h types.h menu.h preset.h
+fpk_task.o:	psos.h types.h portable.h names.h opcodes.h commnmsg.h \
+		kpresmsg.h keypad.h root.h ticks.h fpk_task.h ck_qsend.h \
+		beep.h state.h statedrv.h snsrcalb.h getmsg.h inports.h \
+		memap.h inputs.h 332.h led.h fpkp_msg.h genrlmsg.h
+fpsmangr.o:	psos.h types.h portable.h prepc.h limits.h float.h \
+		stdarg.h assert.h ctype.h errno.h locale.h stddef.h stdio.h \
+		stdlib.h string.h fpkp_msg.h commnmsg.h opcodes.h names.h \
+		kpresmsg.h keypad.h root.h menu.h preset.h error.h genrlmsg.h \
+		fpsmangr.h ck_qsend.h ticks.h menu7a.h display.h getmsg.h \
+		menu7.h  selctkey.h param.h spidd.h wldstate.h \
+		state.h weld_obj.h time.h statedrv.h util.h
+getmsg.o:	psos.h types.h portable.h genrlmsg.h commnmsg.h opcodes.h \
+		names.h kpresmsg.h keypad.h root.h ticks.h fpkp_msg.h \
+		weld_obj.h preset.h menu.h state.h time.h   \
+		getmsg.h weld_msg.h snsrcalb.h qvga_task.h opcodes.h 
+graphs.o: string.h menu.h preset.h util.h portable.h graphs.h drawscrn.h \
+        qvgamenu.h battram.h param.h
+grd_det.o:	names.h psos.h types.h portable.h error.h obj_tabl.h \
+		menu.h preset.h wldstate.h commnmsg.h opcodes.h state.h \
+		weld_obj.h time.h statedrv.h weldhold.h
+initweld.o:	portable.h types.h run_task.h root.h psos.h names.h \
+		command.h sysmangr.h param.h prnmangr.h weldmngr.h preset.h \
+		menu.h
+interpol.o:	portable.h types.h interpol.h
+iotest332.o: serial.h psos.h beep.h util.h memap.h inports.h\
+             outports.h actnvram.h portable.h menu5.h spidd.h param.h
+led.o:	portable.h types.h 332.h qsm.h led.h 
+limits.o:	psos.h types.h portable.h preset.h menu.h param.h \
+		wldstate.h commnmsg.h opcodes.h names.h state.h weld_obj.h \
+		time.h limits.h alarms.h ready.h
+mansensr.o:	mansensr.h portable.h types.h 332.h beep.h qsm.h sc.h \
+		preset.h menu.h inports.h state.h memap.h inputs.h spidd.h \
+		statedrv.h weld.h weld_obj.h psos.h time.h interpol.h menu4.h \
+		menu7a.h actnvram.h snsrcalb.h
+menu.o:	psos.h types.h portable.h prepc.h limits.h float.h stdarg.h \
+		assert.h ctype.h errno.h locale.h stddef.h stdio.h stdlib.h \
+		string.h names.h menu.h menu2.h menu4.h menu5.h genrlmsg.h \
+		commnmsg.h opcodes.h fpkp_msg.h kpresmsg.h keypad.h root.h \
+		error.h preset.h param.h beep.h ck_qsend.h ticks.h  \
+		fmtstrs.h selctkey.h menu1.h led.h util.h \
+		weld_obj.h state.h time.h   getmsg.h genalarm.h \
+		alarms.h menuhorn.h menutest.h statedrv.h display.h rtclock.h \
+		dups_api.h battram.h inports.h memap.h inputs.h 332.h
+menu0.o:	portable.h types.h menu.h menu1.h menu2.h menu4.h menu6.h \
+		menu7.h error.h keypad.h root.h selctkey.h commnmsg.h \
+		opcodes.h names.h param.h state.h statedrv.h preset.h \
+		weld_obj.h psos.h time.h rtclock.h menu0.h
+menu1.o:	portable.h types.h string.h menu.h preset.h param.h error.h \
+		keypad.h root.h selctkey.h commnmsg.h opcodes.h names.h \
+		fmtstrs.h weld_obj.h psos.h state.h time.h display.h beep.h \
+		graphs.h weld_msg.h menu3.h menu1.h kpresmsg.h \
+		getmsg.h alarms.h
+menu2a.o:	prepc.h limits.h float.h stdarg.h assert.h ctype.h errno.h \
+		locale.h stddef.h stdio.h stdlib.h string.h portable.h \
+		types.h menu.h preset.h keypad.h root.h error.h param.h \
+		selctkey.h commnmsg.h opcodes.h names.h kpresmsg.h getmsg.h
+menu2.o:	psos.h types.h portable.h menu.h preset.h param.h limits.h \
+		keypad.h root.h selctkey.h commnmsg.h opcodes.h names.h \
+		error.h beep.h kpresmsg.h getmsg.h ready.h menu1.h menu2.h \
+		dups_api.h battram.h state.h ticks.h
+menu4.o:	psos.h types.h portable.h string.h menu.h graphs.h \
+		weld_obj.h preset.h state.h time.h weld_msg.h \
+		commnmsg.h opcodes.h names.h menu4.h beep.h keypad.h root.h \
+		selctkey.h param.h error.h statedrv.h myptrmsg.h genrlmsg.h \
+		limits.h ck_qsend.h ticks.h weldhold.h alarms.h ready.h \
+		led.h display.h getmsg.h   dups_api.h battram.h \
+		menu7a.h
+preset.o:	psos.h types.h portable.h opcodes.h myptrmsg.h commnmsg.h \
+		names.h nvm_msg.h fpdatmsg.h param.h root.h util.h \
+		stddef.h preset.h menu.h ck_qsend.h ticks.h battram.h menu4.h \
+		menu3.h menu7a.h menu7.h menu1.h kpresmsg.h keypad.h getmsg.h \
+		selctkey.h error.h ready.h serial.h rxcharcv.h weld_obj.h \
+		state.h time.h alsetup.h led.h actnvram.h alarms.h spidd.h \
+		  beep.h digout.h dups_api.h string.h dups.h
+menu5.o:	psos.h types.h portable.h ticks.h selctkey.h commnmsg.h \
+		opcodes.h names.h menu.h param.h keypad.h root.h error.h \
+		menu5.h digout.h preset.h sc.h weld_obj.h state.h time.h \
+		spidd.h statedrv.h fpk_task.h   beep.h getmsg.h \
+		util.h stddef.h led.h   menutest.h \
+		dups_api.h battram.h
+actnvram.o:	psos.h types.h portable.h prepc.h limits.h float.h \
+		stdarg.h assert.h ctype.h errno.h locale.h stddef.h stdio.h \
+		stdlib.h string.h 332.h qsm.h menu.h actnvram.h preset.h \
+		snsrcalb.h ticks.h spidd.h alarms.h ready.h menu7a.h digout.h \
+		  weld_obj.h state.h time.h rdyweld1.h
+menu7a.o:	psos.h types.h portable.h time.h string.h menu.h rtclock.h \
+		error.h preset.h param.h kpresmsg.h commnmsg.h opcodes.h \
+		names.h keypad.h root.h selctkey.h menu7.h menu7a.h \
+		sysmangr.h state.h util.h stddef.h statedrv.h serial.h \
+		  weld_obj.h actnvram.h mansensr.h
+menucalb.o:	psos.h types.h portable.h menu.h menucalb.h actnvram.h \
+		menu5.h menu7a.h param.h ticks.h snsrcalb.h rtclock.h \
+		string.h fpk_task.h preset.h selctkey.h commnmsg.h \
+		opcodes.h names.h keypad.h root.h error.h kpresmsg.h getmsg.h
+menuhorn.o:	psos.h types.h portable.h actnvram.h string.h menu.h \
+		menu1.h param.h preset.h weld_obj.h state.h time.h genrlmsg.h \
+		commnmsg.h opcodes.h names.h ck_qsend.h ticks.h digout.h \
+		beep.h led.h  root.h display.h keypad.h fpk_task.h \
+		getmsg.h fmtstrs.h statedrv.h alarms.h alsetup.h ready.h \
+		selctkey.h error.h   menuhorn.h util.h \
+		stddef.h mansensr.h	encoder.h 
+menupass.o:	psos.h types.h portable.h prepc.h limits.h float.h \
+		stdarg.h assert.h ctype.h errno.h locale.h stddef.h stdio.h \
+		stdlib.h string.h ticks.h root.h menu.h kpresmsg.h \
+		commnmsg.h opcodes.h names.h keypad.h error.h param.h \
+		preset.h display.h getmsg.h selctkey.h  menupass.h         
+min_mode.o:	psos.h types.h portable.h names.h min_mode.h root.h \
+		run_task.h fpsmangr.h fpk_task.h dups.h qvga_task.h
+menutest.o:	string.h portable.h types.h menu.h param.h preset.h \
+		mansensr.h keypad.h root.h led.h beep.h genrlmsg.h \
+		commnmsg.h opcodes.h names.h getmsg.h state.h statedrv.h \
+		ck_qsend.h ticks.h display.h  selctkey.h error.h \
+		weld_obj.h psos.h time.h   menutest.h \
+		menu7a.h
+objects.o:	run_task.h root.h psos.h types.h portable.h names.h \
+		obj_tabl.h objects.h
+obj_tabl.o:	psos.h types.h portable.h names.h obj_tabl.h
+outports.o:	psos.h types.h portable.h outports.h memap.h inputs.h \
+		332.h
+peakpwr.o:	names.h psos.h types.h portable.h error.h obj_tabl.h \
+		menu.h preset.h wldstate.h commnmsg.h opcodes.h state.h \
+		weld_obj.h time.h statedrv.h weldhold.h
+powrdwn.o:	psos.h types.h portable.h preset.h menu.h battram.h \
+		powrdwn.h mansensr.h dups_api.h string.h digout.h
+prnmangr.o:	graphs.h psos.h types.h portable.h weld_obj.h preset.h \
+		menu.h state.h time.h weld_msg.h commnmsg.h \
+		opcodes.h names.h genrlmsg.h prnmangr.h statedrv.h menu4.h \
+		ck_qsend.h ticks.h alarms.h ready.h
+menu3.o:	prepc.h limits.h float.h stdarg.h assert.h ctype.h errno.h \
+		locale.h stddef.h stdio.h stdlib.h string.h portable.h \
+		types.h menu.h graphs.h psos.h weld_obj.h preset.h state.h \
+		time.h weld_msg.h commnmsg.h opcodes.h names.h \
+		keypad.h root.h beep.h selctkey.h param.h error.h ck_qsend.h \
+		ticks.h kpresmsg.h getmsg.h fmtstrs.h display.h battram.h \
+		util.h   menu3.h statedrv.h  dups_api.h alarms.h \
+		ready.h weldmngr.h digout.h  
+prsetprn.o:	psos.h types.h portable.h string.h math.h preset.h \
+		menu.h weld_msg.h commnmsg.h opcodes.h names.h \
+		state.h weld_obj.h time.h util.h stddef.h limits.h menu7a.h \
+		menu4.h graphs.h prsetprn.h limarray.h pr_var.h actnvram.h \
+		rtclock.h dups_api.h battram.h
+pr_print.o:	stdlib.h graphs.h psos.h types.h portable.h weld_obj.h \
+		preset.h menu.h state.h time.h weld_msg.h \
+		commnmsg.h opcodes.h names.h string.h util.h stddef.h \
+		fmtstrs.h ticks.h keypad.h root.h selctkey.h param.h error.h \
+		battram.h menu7a.h menu4.h alarms.h dups_api.h rtclock.h
+pr_label.o:	string.h preset.h portable.h types.h menu.h util.h \
+		stddef.h graphs.h psos.h weld_obj.h state.h time.h \
+		weld_msg.h commnmsg.h opcodes.h names.h
+time.o:	names.h psos.h types.h portable.h error.h obj_tabl.h menu.h \
+		preset.h wldstate.h commnmsg.h opcodes.h state.h weld_obj.h \
+		time.h statedrv.h weldhold.h
+qvgadiagnostics.o: string.h menu.h menu5.h qvgamenu.h DrawScrn.h \
+                 dups_api.h digout.h statedrv.h spidd.h preset.h param.h util.h \
+                 selctkey.h state.h ticks.h snsrcalb.h        
+qvgamenu.o: psos.h string.h qvgamenu.h  drawscrn.h menu.h menu5.h \
+        display.h ascii.h opcodes.h statedrv.h selctkey.h beep.h param.h \
+        touchmsg_qvga.h qvga_task.h qvga_uart.h portable.h        
+qvgapreset.o: prepc.h qvgamenu.h drawscrn.h touchmsg_qvga.h ck_qsend.h menu3.h preset.h \
+            param.h dups_api.h ready.h alarms.h statedrv.h state.h selctkey.h           
+qvga_task.o: psos.h string.h names.h opcodes.h commnmsg.h ck_qsend.h beep.h \
+             qvga_task.h bsp.h bspfuncs.h root.h qvga_uart.h ticks.h \
+             qvgamenu.h drawscrn.h genrlmsg.h touchmsg_qvga.h weld_msg.h \
+             drawscrn.h util.h menu.h portable.h param.h rtclock.h ascii.h \
+             getmsg.h screenmsg_touch.h command.h ipsatype.h
+qvgacalib.o: menu.h qvgamenu.h sc.h snsrcalb.h digout.h param.h
+qvgasensorcalib.o: menu.h qvgamenu.h sc.h snsrcalb.h digout.h drawscrn.h
+root.o:	psos.h types.h portable.h prepc.h limits.h float.h stdarg.h \
+		assert.h ctype.h errno.h locale.h stddef.h stdio.h stdlib.h \
+		string.h bsp.h bspfuncs.h opcodes.h rtclock.h root.h \
+		library.h objects.h ticks.h tickldog.h memap.h inputs.h 332.h \
+		inports.h state.h outports.h min_mode.h run_task.h names.h \
+		initweld.h battram.h preset.h menu.h  statedrv.h util.h \
+		psnvram.h actnvram.h weldmngr.h weld_obj.h time.h \
+		weld_msg.h commnmsg.h qsm.h tpu.h comm_crc.h alarms.h menu3.h \
+		ready.h graphs.h digout.h serial.h snsrcalb.h \
+		sysmangr.h param.h rxcharcv.h wc_isr.h menu7a.h \
+		menu2.h mansensr.h menutest.h version_change.h
+rtclock.o:	portable.h types.h time.h rtclock.h param.h
+run_task.o:	psos.h types.h portable.h names.h root.h run_task.h \
+		obj_tabl.h
+rxcharcv.o:	psos.h types.h portable.h prepc.h limits.h float.h \
+		stdarg.h assert.h ctype.h errno.h locale.h stddef.h stdio.h \
+		stdlib.h string.h rxcharcv.h ipscdmsg.h weld_obj.h preset.h \
+		menu.h state.h time.h commnmsg.h opcodes.h names.h cibinfo.h \
+		ipscmdty.h ipsatype.h serial.h root.h ckptgbuf.h \
+		ck_qsend.h ticks.h iotest332.h
+sc.o:	preset.h portable.h types.h menu.h keypad.h root.h param.h \
+		wldstate.h commnmsg.h opcodes.h names.h state.h weld_obj.h \
+		psos.h time.h weld.h digout.h ready.h beep.h genrlmsg.h \
+		ck_qsend.h ticks.h alarms.h interpol.h mansensr.h menucalb.h \
+		display.h sc.h snsrcalb.h spidd.h states.h statedrv.h \
+		selctkey.h error.h sysmangr.h menu5.h kpresmsg.h getmsg.h \
+		fpk_task.h actnvram.h encoder.h
+qvgarunresultoption.o: menu.h param.h portable.h preset.h beep.h drawscrn.h \
+                menu1.h battram.h qvgamenu.h graphs.h
+selctkey.o:	psos.h types.h portable.h prepc.h limits.h float.h \
+		stdarg.h assert.h ctype.h errno.h locale.h stddef.h stdio.h \
+		stdlib.h string.h names.h fpdatmsg.h commnmsg.h opcodes.h \
+		param.h fpkptype.h menu.h preset.h ticks.h error.h keypad.h \
+		root.h beep.h ck_qsend.h genrlmsg.h selctkey.h \
+		weld_obj.h state.h time.h sc.h display.h fmtstrs.h \
+		kpresmsg.h menu1.h menu5.h menu3.h menu7.h menu7a.h led.h \
+		util.h  getmsg.h statedrv.h snsrcalb.h digout.h spidd.h \
+		menupass.h genalarm.h alarms.h sysmangr.h serial.h rtclock.h
+snsrcalb.o:	psos.h types.h portable.h stdlib.h names.h alarms.h \
+		interpol.h wldstate.h commnmsg.h opcodes.h state.h weld_obj.h \
+		preset.h menu.h time.h beep.h string.h rtclock.h ready.h \
+		keypad.h root.h digout.h getmsg.h selctkey.h param.h error.h \
+		spidd.h actnvram.h fpk_task.h mansensr.h menucalb.h \
+		genrlmsg.h statedrv.h ck_qsend.h ticks.h snsrcalb.h \
+		sysmangr.h sc.h  332.h qsm.h menu7a.h encoder.h
+spidd.o:	mansensr.h portable.h types.h 332.h led.h digout.h preset.h \
+		menu.h qsm.h fmtstrs.h spidd.h alarms.h sc.h ready.h state.h \
+		statedrv.h snsrcalb.h ticks.h weld.h kpresmsg.h \
+		commnmsg.h opcodes.h names.h keypad.h root.h getmsg.h \
+		interpol.h weld_obj.h psos.h time.h actnvram.h m68332.h
+sysmangr.o:	psos.h types.h portable.h string.h names.h opcodes.h \
+		myptrmsg.h commnmsg.h genrlmsg.h preset.h menu.h param.h \
+		wldstate.h state.h weld_obj.h time.h statedrv.h prsetmsg.h \
+		nvm_msg.h battram.h keypad.h root.h digout.h menu3.h \
+		fpdatmsg.h obj_tabl.h sysmangr.h selctkey.h error.h limits.h \
+		weld_msg.h genalarm.h alarms.h ckptgbuf.h ck_qsend.h ticks.h \
+		spidd.h snsrcalb.h actnvram.h menu7a.h serial.h   \
+		rxcharcv.h psnvram.h fpsmangr.h alsetup.h util.h stddef.h \
+		graphs.h ready.h kpresmsg.h getmsg.h
+testing.o: psos.h opcodes.h myptrmsg.h nvm_msg.h  util.h \
+        preset.h ck_qsend.h battram.h menu.h menu4.h menu3.h \
+        menu7a.h menu7.h menu1.h kpresmsg.h getmsg.h selctkey.h \
+        ready.h serial.h rxcharcv.h weld_obj.h alsetup.h led.h \
+        actnvram.h alarms.h spidd.h   beep.h digout.h \
+        dups_api.h string.h dups.h drawscrn.h        
+tickldog.o:	psos.h types.h portable.h names.h tickldog.h ticks.h \
+		memap.h inputs.h 332.h genrlmsg.h commnmsg.h opcodes.h \
+		resetmsg.h
+timer.o:	portable.h types.h error.h state.h timer.h
+tsrn_task.o: psos.h stdlib.h screenmsg_touch.h opcodes.h names.h \
+           qvga_task.h genrlmsg.h ck_qsend.h drawscrn.h string.h
+version.o:            
+vpreset1.o:	psos.h types.h portable.h ck_qsend.h ticks.h error.h \
+		preset.h menu.h param.h limits.h names.h alarms.h ready.h \
+		weld_obj.h state.h time.h wldstate.h commnmsg.h opcodes.h \
+		vpreset1.h vpreset2.h vpreset3.h vpreset4.h vpreset5.h \
+		alsetup.h graphs.h weld_msg.h statedrv.h battram.h \
+		menu3.h menu4.h DUPS_api.h
+vpreset2.o:	psos.h types.h portable.h prepc.h limits.h float.h \
+		stdarg.h assert.h ctype.h errno.h locale.h stddef.h stdio.h \
+		stdlib.h string.h error.h preset.h menu.h param.h ready.h \
+		alarms.h vpreset1.h vpreset2.h vpreset3.h vpreset4.h \
+		vpreset5.h
+menu8.o: psos.h portable.h menu.h preset.h param.h limits.h\
+         keypad.h selctkey.h beep.h kpresmsg.h getmsg.h\
+         ready.h menu1.h menu2.h menu3.h dups_api.h state.h\
+         ticks.h         
+runresults.o: string.h menu.h menu1.h menu3.h menu5.h preset.h prsetprn.h \
+                display.h dups_api.h weld_obj.h battram.h graphs.h sc.h \
+                DRAWSCRN.h QVGAMENU.h screenmsg_touch.h portable.h ticks.h \
+                genalarm.h digout.h statedrv.h command.h param.h  menu7a.h
+        
+#ENDUPDATE#
+
+
+.h_v.h :
+        echo Get $(_Source)
+        get -U -q  $(_SourceRev) $(_Source)($(_Target))
+
+.c_v.c :
+        echo Get $(_Source)
+        get -U -q  $(_SourceRev) $(_Source)($(_Target))
+
+.s_v.s :
+        echo Get $(_Source)
+        get -U -q  $(_SourceRev) $(_Source)($(_Target))
+
+.CPv.cpp:
+        echo Get $(_Source)
+        get -U -q  $(_SourceRev) $(_Source)($(_Target))
+
+# Rule for compiling c files
+
+# Rule for assembling s files
+
+.s.o:
+    (Extraline) $(AS) $(AOPTS) $(_Source)
+
+# Rule for compiling c files
+.c.o:
+    echo Compiling $(_Source)
+    (ExtraLine)$(CC) $(COPTS) $(COPTS_FILE2) $(COPTS_FILE3) $(_Source)
+
+.cpp.o:
+   (Silent)echo Compiling $(_Source)
+    (ExtraLine)$(CCPPSOS) $(CCCP) $(_Source)
